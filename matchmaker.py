@@ -112,3 +112,41 @@ with st.form("participant_form", clear_on_submit=True):
     if submitted:
         st.info("Form submitted! (Saving data will happen in the next step)")
 
+# --- Placeholder for the insights sections ---
+# We will add these in later steps!
+
+# --- How to Run Instructions (for your reference) ---
+st.markdown("---")
+st.markdown(
+    """
+    ### How to Run This App:
+
+    1.  **Save the code:** Save the code above into your `matchmaker.py` file.
+    2.  **Install Libraries:** If you don't have them, open your terminal or command prompt and run:
+        ```bash
+        pip install streamlit pandas gspread
+        ```
+    3.  **Google Sheet Setup (CRITICAL!):** Ensure your Google Sheet and Service Account are set up as per previous instructions.
+    4.  **Run the app:** Navigate to the directory where you saved the file in your terminal and run:
+        ```bash
+        streamlit run matchmaker.py
+        ```
+    5.  **Access:** Your web browser will automatically open to the Streamlit app (usually `http://localhost:8501`).
+
+    ### For GitHub Deployment with Streamlit Cloud:
+
+    1.  **Ensure `matchmaker.py` is updated:** Make sure your `matchmaker.py` file in your GitHub repo has the latest code.
+    2.  **Create `requirements.txt`:** In the same repository, create a file named `requirements.txt` with the following content:
+        ```
+        streamlit
+        pandas
+        gspread
+        ```
+    3.  **Set up Streamlit Secrets:** This is crucial for deployment. You *must* set up your Google Service Account credentials as secrets in Streamlit Cloud.
+        * Go to your Streamlit Cloud app's dashboard.
+        * Click on "Settings" (the three dots next to your app).
+        * Go to "Secrets".
+        * Add a secret named `google_sheets` and paste your service account JSON key content into it.
+    4.  **Deploy:** Connect your GitHub repository to Streamlit Cloud, select `matchmaker.py` as the main file, and deploy!
+    """
+)
