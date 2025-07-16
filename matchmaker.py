@@ -100,7 +100,7 @@ with st.form("participant_form", clear_on_submit=True):
     st.subheader("Personality")
     intro_extro = st.radio(
         "Are you an extrovert or an introvert?",
-        ["Introvert", "Extrovert", "Ambi-vert (mix of both)"],
+        ["Introvert", "Extrovert", "Ambi-vert"],
         key="intro_extro_input"
     )
 
