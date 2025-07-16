@@ -12,3 +12,9 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# --- Global Variables for Google Sheet ---
+# IMPORTANT: Replace with your actual Google Sheet URL or ID and worksheet name
+GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/1bkrQ4q4maV0eAt4Ap4cBL5XNWvrgq0SLV3EsEcieTF4/edit?gid=0#gid=0"
+WORKSHEET_NAME = "Participants" # Default worksheet name
+
+streamlit run matchmaker.py
