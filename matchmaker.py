@@ -106,14 +106,17 @@ with st.form("participant_form", clear_on_submit=True):
         key="intro_extro_input"
     )
 #3
-    st.subheader("Dream Date")
-    st.write("What's your dream date?")
+    col1, col2 = st.columns([3, 1])  # 3:1 width ratio
+    
+    with col1:
+        st.write("### Choose your dream date:")
+    
+    with col2:
+        st.image(
+            "https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/huda%20dream%20date.jpg?token=GHSAT0AAAAAADH47VQYBL7ESSWZM6R4XH2E2EBIEVA",
+            width=150
+        )
 
-    st.image(
-        "https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/huda%20dream%20date.jpg?token=GHSAT0AAAAAADH47VQYBL7ESSWZM6R4XH2E2EBIEVA",
-        caption="Huda's Dream Date Meme",
-        width=300
-    )
 
     dream_date = st.radio(
         "Choose your dream date:",
