@@ -141,7 +141,7 @@ with st.form("participant_form", clear_on_submit=True):
             new_participant_answers = {
                 "Name": name,
                 "What are you looking for?": looking_for,
-                "Choose your dream date:" dream_date,
+                "Choose your dream date:": dream_date,
                 "Are you an extrovert or an introvert?": intro_extro,
                 # We are not collecting Gender or Looking For yet, so they are omitted
                 # If these columns exist in your Google Sheet, they will be filled with '' (empty string)
