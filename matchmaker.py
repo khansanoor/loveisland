@@ -119,9 +119,7 @@ with st.form("participant_form", clear_on_submit=True):
             ]
         )
     with col2:
-        st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_dream_date.jpg",
-        use_container_width=True
-        )
+        st.image("https://raw.githubusercontent.com/khansanoor/loveisland/main/images/huda_dream_date.jpg", use_container_width=True)
     
     submitted = st.form_submit_button("Submit My Profile!")
 
