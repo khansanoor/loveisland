@@ -106,15 +106,14 @@ with st.form("participant_form", clear_on_submit=True):
         key="intro_extro_input"
     )
 #3
-    col1, col2 = st.columns([3, 1])  # 3:1 width ratio
+    col1, col2 = st.columns([1, 3])  # 3:1 width ratio
     
     with col1:
-        st.write("### Choose your dream date:")
-    
-    with col2:
         st.image(
             "https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/huda%20dream%20date.jpg?token=GHSAT0AAAAAADH47VQYBL7ESSWZM6R4XH2E2EBIEVA",
             width=150
+    with col2:
+        st.write("")
         )
 
 
