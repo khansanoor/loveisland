@@ -85,7 +85,7 @@ def add_participant_to_sheet(participant_answers):
 # --- Streamlit UI (First Visible Elements) ---
 
 st.header("🌴 Welcome Islanders!")
-st.markdown("**Fill out this form to help us find you a match in villa.**")
+st.markdown("**Help us find you a match in the villa.**")
 
 # --- Load data at the start of the app ---
 # This ensures the app always has the latest data from the sheet
@@ -96,12 +96,15 @@ with st.form("participant_form", clear_on_submit=True):
     # st.header("Tell Us About Yourself!")
     
 #1
-    name = st.text_input("**What is your name?**", key="name_input").strip()
-    
+    # name = st.text_input("**What is your name?**", key="name_input").strip()
+    col_name, _ = st.columns([1, 3])  # Adjust the ratio to make the input narrower
+    with col_name:
+        name = st.text_input("What is your name?", key="name_input").strip()
+
     #st.subheader("Personality")
 #2  
     looking_for = st.radio(
-        "What are you looking for?",
+        "**What are you looking for?**",
         ["Romance 💕", "Friends 🤝", "Both 💞"],
         key="looking_for_input"
     )
