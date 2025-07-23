@@ -124,7 +124,7 @@ with st.form("participant_form", clear_on_submit=True):
         )
    #4 
     cooking_role = st.radio(
-            "**When cooking with someone, which role do you usually take?**",
+            "**What role do you play when cooking with someone?**",
             [
                 "Head Chef",
                 "Sous Chef",
@@ -146,23 +146,13 @@ with st.form("participant_form", clear_on_submit=True):
                 "Relax at home",
                 "Go on an adventure",
                 "Hang out with friends",
-                "Catch up on hobbies",
-                "Something else:"
+                "Catch up on hobbies"
             ],
             key="free_day_activity_input"
         )
-    
-    # If user chooses 'Something else', show a text input to specify
-    if free_day_activity == "Something else (please specify)":
-        free_day_activity_other = st.text_input(
-            "Please specify:",
-            key="free_day_activity_other_input"
-        )
-    else:
-        free_day_activity_other = ""
 
+#7
 
-    
     intro_extro = st.radio(
             "**Are you an extrovert or an introvert?**",
             ["Introvert", "Extrovert", "Ambi-vert"],
