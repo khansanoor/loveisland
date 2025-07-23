@@ -110,6 +110,7 @@ with st.form("participant_form", clear_on_submit=True):
     with col1:
         dream_date = st.radio(
             "**Choose your dream date:**",
+            st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_3.jpeg", width=50),
             [
                 "Movie night 🎬",
                 "Mystery date 🎁",
