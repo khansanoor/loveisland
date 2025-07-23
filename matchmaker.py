@@ -85,7 +85,7 @@ def add_participant_to_sheet(participant_answers):
 # --- Streamlit UI (First Visible Elements) ---
 
 st.header("🌴 Welcome Islanders!")
-st.markdown("**Help us find you a match in the villa.**")
+st.markdown("**Help us find a match for you in the villa.**")
 
 # --- Load data at the start of the app ---
 # This ensures the app always has the latest data from the sheet
@@ -124,7 +124,7 @@ with st.form("participant_form", clear_on_submit=True):
         )
    #4 
     cooking_role = st.radio(
-            "When cooking with someone, which role do you usually take?",
+            "**When cooking with someone, which role do you usually take?**",
             [
                 "Head Chef",
                 "Sous Chef",
@@ -135,13 +135,13 @@ with st.form("participant_form", clear_on_submit=True):
 
     #5
     favorite_meal = st.text_input(
-            "What’s your all-time favorite meal?",
+            "What’s your favorite meal of all-time?",
             key="favorite_meal_input"
         )
 
     #6
     free_day_activity = st.radio(
-            "If you had a day with zero responsibilities, how would you spend it?",
+            "**If you had a day with zero responsibilities, how would you spend it?**",
             [
                 "Relax at home",
                 "Go on an adventure",
