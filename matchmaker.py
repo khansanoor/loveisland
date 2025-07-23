@@ -84,8 +84,8 @@ def add_participant_to_sheet(participant_answers):
 
 # --- Streamlit UI (First Visible Elements) ---
 
-st.header("🌴 Welcome Islanders!")
-st.markdown("**Help us find a match for you in the villa♡**")
+st.header("Welcome Islanders!🌴")
+st.markdown("**Help us find a match for you in the villa✦♥♡**")
 
 # --- Load data at the start of the app ---
 # This ensures the app always has the latest data from the sheet
