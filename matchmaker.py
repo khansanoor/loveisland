@@ -106,7 +106,26 @@ with st.form("participant_form", clear_on_submit=True):
         key="intro_extro_input"
     )
 #3
-    
+    st.subheader("Dream Date")
+st.write("What's your dream date?")
+
+st.image(
+    "https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/huda%20dream%20date.jpg?token=GHSAT0AAAAAADH47VQYBL7ESSWZM6R4XH2E2EBIEVA",
+    caption="Huda's Dream Date Meme",
+    use_column_width=True
+)
+
+dream_date = st.radio(
+    "Choose your dream date:",
+    [
+        "Sunset beach picnic 🌅",
+        "Dinner at a fancy restaurant 🍽️",
+        "Adventure hike 🥾",
+        "Cozy movie night 🎬",
+        "Surprise mystery date 🎁"
+    ]
+)
+
     
     submitted = st.form_submit_button("Submit My Profile!")
 
