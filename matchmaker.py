@@ -112,10 +112,10 @@ with st.form("participant_form", clear_on_submit=True):
         dream_date = st.radio(
             "Choose your dream date:",
             [
-                "Sunset picnic 🌅",
-                "Bookstore browse 📚",
                 "Movie night 🎬",
                 "Mystery date 🎁",
+                "Sunset picnic 🌅",
+                "Bookstore browse 📚",
                 "Explore a neighborhood 🏙️"
             ]
         )
