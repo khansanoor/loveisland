@@ -99,7 +99,7 @@ with st.form("participant_form", clear_on_submit=True):
     # name = st.text_input("**❀ What is your name?**", key="name_input").strip()
     col_name, _ = st.columns([1, 3])  # Adjust the ratio to make the input narrower
     with col_name:
-        name = st.text_input("**What is your name?**", key="name_input").strip()
+        name = st.text_input("**❀ What is your name?**", key="name_input").strip()
 
     # st.markdown("❀")
 #2  
@@ -135,13 +135,13 @@ with st.form("participant_form", clear_on_submit=True):
 
     #5
     favorite_meal = st.text_input(
-            "❀ **What’s your favorite meal of all-time?**",
+            "**❀ What’s your favorite meal of all-time?**",
             key="favorite_meal_input"
         )
 
     #6
     free_day_activity = st.radio(
-            "**How would you spend a day with no obligations?**",
+            "**❀ How would you spend a day with no obligations?**",
             [
                 "Relax at home",
                 "Go on an adventure",
@@ -154,7 +154,7 @@ with st.form("participant_form", clear_on_submit=True):
 #7
 
     intro_extro = st.radio(
-            "**Are you an extrovert or an introvert?**",
+            "**❀ Are you an extrovert or an introvert?**",
             ["Introvert", "Extrovert", "Ambi-vert"],
             key="intro_extro_input"
         )
