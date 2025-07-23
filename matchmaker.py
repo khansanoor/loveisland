@@ -111,7 +111,7 @@ with st.form("participant_form", clear_on_submit=True):
         dream_date = st.radio(
             "Choose your dream date:",
             [
-                "Sunset beach picnic 🌅",
+                "Sunset picnic 🌅",
                 "Dinner at a fancy restaurant 🍽️",
                 "Adventure hike 🥾",
                 "Cozy movie night 🎬",
@@ -120,7 +120,7 @@ with st.form("participant_form", clear_on_submit=True):
         )
     with col1:
         st.image(
-            "https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/huda%20dream%20date.jpg?token=GHSAT0AAAAAADH47VQYBL7ESSWZM6R4XH2E2EBIEVA",
+            "https://github.com/khansanoor/loveisland/blob/be60c2551dacbd9adcca55676b94e0316ee6204e/huda%20dream%20date.jpg",
         use_container_width=True
         )
     
