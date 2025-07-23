@@ -99,7 +99,7 @@ with st.form("participant_form", clear_on_submit=True):
     # name = st.text_input("**What is your name?**", key="name_input").strip()
     col_name, _ = st.columns([1, 3])  # Adjust the ratio to make the input narrower
     with col_name:
-        name = st.text_input("What is your name?", key="name_input").strip()
+        name = st.text_input("**What is your name?**", key="name_input").strip()
 
     #st.subheader("Personality")
 #2  
@@ -111,9 +111,9 @@ with st.form("participant_form", clear_on_submit=True):
     
 #3
     st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_dream_date.jpeg", width=100)
-    st.caption("Jeremiah couldn't give Huda her dream date :/") 
+    st.caption("Jeremiah couldn't give Huda her dream date, but you can still have yours.") 
     dream_date = st.radio(
-            "**But you can still have yours, choose your dream date:**",
+            "**Choose your dream date:**",
             [
                 "Movie night 🎬",
                 "Mystery date 🎁",
@@ -140,8 +140,9 @@ with st.form("participant_form", clear_on_submit=True):
             # Ensure these keys match your Google Sheet column headers exactly
             new_participant_answers = {
                 "Name": name,
+                "What are you looking for?": looking_for,
+                "Choose your dream date:" dream_date,
                 "Are you an extrovert or an introvert?": intro_extro,
-                "Choose your dream date": dream_date,
                 # We are not collecting Gender or Looking For yet, so they are omitted
                 # If these columns exist in your Google Sheet, they will be filled with '' (empty string)
             }
