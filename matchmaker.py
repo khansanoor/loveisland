@@ -93,7 +93,7 @@ participants_data = load_participants_from_sheet()
 
 # --- Participant Input Form (Step 1 Focus) ---
 with st.form("participant_form", clear_on_submit=True):
-    st.header("Tell Us About Yourself!")
+    # st.header("Tell Us About Yourself!")
     
 #1
     name = st.text_input("What is your name?", key="name_input").strip()
