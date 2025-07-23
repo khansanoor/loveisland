@@ -106,7 +106,7 @@ with st.form("participant_form", clear_on_submit=True):
         key="intro_extro_input"
     )
 #3
-    col1, col2 = st.columns([1, 1])  # 2:1 width ratio
+    col1, col2 = st.columns([1, 2])  # 2:1 width ratio
     with col1:
         dream_date = st.radio(
             "**Choose your dream date:**",
