@@ -106,16 +106,16 @@ with st.form("participant_form", clear_on_submit=True):
         key="intro_extro_input"
     )
 #3
-    col1, col2 = st.columns([3, 1])  # 3:1 width ratio
+    col1, col2 = st.columns([2, 1])  # 2:1 width ratio
     with col1:
         dream_date = st.radio(
             "Choose your dream date:",
             [
                 "Sunset picnic 🌅",
-                "Dinner at a fancy restaurant 🍽️",
                 "Adventure hike 🥾",
                 "Cozy movie night 🎬",
-                "Surprise mystery date 🎁"
+                "Surprise mystery date 🎁",
+                "Dinner at a fancy restaurant 🍽️"
             ]
         )
     with col2:
