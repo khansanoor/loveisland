@@ -152,14 +152,14 @@ with st.form("participant_form", clear_on_submit=True):
             key="free_day_activity_input"
         )
     
-        # If user chooses 'Something else', show a text input to specify
-        if free_day_activity == "Something else (please specify)":
-            free_day_activity_other = st.text_input(
-                "Please specify:",
-                key="free_day_activity_other_input"
-            )
-        else:
-            free_day_activity_other = ""
+    # If user chooses 'Something else', show a text input to specify
+    if free_day_activity == "Something else (please specify)":
+        free_day_activity_other = st.text_input(
+            "Please specify:",
+            key="free_day_activity_other_input"
+        )
+    else:
+        free_day_activity_other = ""
 
 
     
