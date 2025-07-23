@@ -135,7 +135,7 @@ with st.form("participant_form", clear_on_submit=True):
 
     #5
     favorite_meal = st.text_input(
-            "❀**❀ What’s your favorite meal of all-time?**",
+            "❀ **What’s your favorite meal of all-time?**",
             key="favorite_meal_input"
         )
 
