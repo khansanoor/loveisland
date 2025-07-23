@@ -107,10 +107,12 @@ with st.form("participant_form", clear_on_submit=True):
     )
 #3
     col1, col2 = st.columns([1, 3])  # 2:1 width ratio
+    
     with col1:
+        st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_3.jpeg", width=100)
+    with col2:
         dream_date = st.radio(
-            "**Choose your dream date:**,
-            st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_3.jpeg", width=50)",
+            "**Choose your dream date:**",
             [
                 "Movie night 🎬",
                 "Mystery date 🎁",
@@ -119,8 +121,6 @@ with st.form("participant_form", clear_on_submit=True):
                 "Explore a neighborhood 🏙️"
             ]
         )
-    with col2:
-        st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_3.jpeg", width=50)
     
     submitted = st.form_submit_button("Submit My Profile!")
 
