@@ -140,7 +140,7 @@ with st.form("participant_form", clear_on_submit=True):
         )
 
     #6
-        free_day_activity = st.radio(
+    free_day_activity = st.radio(
             "If you had a day with zero responsibilities, how would you spend it?",
             [
                 "Relax at home",
