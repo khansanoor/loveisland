@@ -113,10 +113,10 @@ with st.form("participant_form", clear_on_submit=True):
             "Choose your dream date:",
             [
                 "Sunset picnic 🌅",
-                "Adventure hike 🥾",
-                "Cozy movie night 🎬",
-                "Surprise mystery date 🎁",
-                "Dinner at a fancy restaurant 🍽️"
+                "Bookstore browse 📚",
+                "Movie night 🎬",
+                "Mystery date 🎁",
+                "Explore a neighborhood 🏙️"
             ]
         )
     with col2:
