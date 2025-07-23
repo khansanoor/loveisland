@@ -100,14 +100,15 @@ with st.form("participant_form", clear_on_submit=True):
     
     #st.subheader("Personality")
 #2  
-    intro_extro = st.radio(
-        "**Are you an extrovert or an introvert?**",
-        ["Introvert", "Extrovert", "Ambi-vert"],
-        key="intro_extro_input"
+    looking_for = st.radio(
+        "What are you looking for?",
+        ["Romance 💕", "Friends 🤝", "Both 💞"],
+        key="looking_for_input"
     )
+    
 #3
     st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_dream_date.jpeg", width=100)
-    st.caption("Jeremiah couldn't give huda her dream date :/") 
+    st.caption("Jeremiah couldn't give Huda her dream date :/") 
     dream_date = st.radio(
             "**But you can still have yours, choose your dream date:**",
             [
@@ -118,7 +119,13 @@ with st.form("participant_form", clear_on_submit=True):
                 "Explore a neighborhood 🏙️"
             ]
         )
-    
+   #4 
+        intro_extro = st.radio(
+            "**Are you an extrovert or an introvert?**",
+            ["Introvert", "Extrovert", "Ambi-vert"],
+            key="intro_extro_input"
+        )
+
     submitted = st.form_submit_button("Submit My Profile!")
 
     # Submitting to Gsheets
