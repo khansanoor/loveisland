@@ -108,9 +108,9 @@ with st.form("participant_form", clear_on_submit=True):
 #3
     col1, col2 = st.columns([2, 1])  # 2:1 width ratio
     with col1:
-        st.markdown("### Choose your dream date:")
+        # st.markdown("### Choose your dream date:")
         dream_date = st.radio(
-            "",
+            "Choose your dream date:",
             [
                 "Sunset picnic 🌅",
                 "Adventure hike 🥾",
@@ -133,7 +133,8 @@ with st.form("participant_form", clear_on_submit=True):
             # Ensure these keys match your Google Sheet column headers exactly
             new_participant_answers = {
                 "Name": name,
-                "Are you more introverted or extroverted?": intro_extro,
+                "Are you an extrovert or an introvert?": intro_extro,
+                "Choose your dream date": dream_date
                 # We are not collecting Gender or Looking For yet, so they are omitted
                 # If these columns exist in your Google Sheet, they will be filled with '' (empty string)
             }
