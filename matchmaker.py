@@ -121,7 +121,7 @@ with st.form("participant_form", clear_on_submit=True):
     with col1:
         st.image(
             "https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/huda%20dream%20date.jpg?token=GHSAT0AAAAAADH47VQYBL7ESSWZM6R4XH2E2EBIEVA",
-            width=150
+        use_container_width=True
         )
     
     submitted = st.form_submit_button("Submit My Profile!")
