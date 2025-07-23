@@ -111,7 +111,7 @@ with st.form("participant_form", clear_on_submit=True):
     
 #3
     st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_dream_date.jpeg", width=100)
-    st.caption("Huda couldn't have her dream date but you can still have yours") 
+    st.caption("Huda's dream date didn't happen, but yours can!") 
     dream_date = st.radio(
             "**Choose your dream date:**",
             [
