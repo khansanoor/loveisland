@@ -85,7 +85,7 @@ def add_participant_to_sheet(participant_answers):
 # --- Streamlit UI (First Visible Elements) ---
 
 st.header("Welcome Islanders!🌴")
-st.markdown("**Help us find a match for you in the villa✦♥♡**")
+st.markdown("**Help us find a match for you in the villa ♥**")
 
 # --- Load data at the start of the app ---
 # This ensures the app always has the latest data from the sheet
@@ -96,15 +96,15 @@ with st.form("participant_form", clear_on_submit=True):
     # st.header("Tell Us About Yourself!")
     
 #1
-    # name = st.text_input("**What is your name?**", key="name_input").strip()
+    # name = st.text_input("**❀ What is your name?**", key="name_input").strip()
     col_name, _ = st.columns([1, 3])  # Adjust the ratio to make the input narrower
     with col_name:
         name = st.text_input("**What is your name?**", key="name_input").strip()
 
-    st.markdown("❀")
+    # st.markdown("❀")
 #2  
     looking_for = st.radio(
-        "**What are you looking for?**",
+        "**❀ What are you looking for?**",
         ["Romance 💕", "Friends 🤝", "Both 💞"],
         key="looking_for_input"
     )
@@ -113,7 +113,7 @@ with st.form("participant_form", clear_on_submit=True):
     st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_dream_date.jpeg", width=100)
     st.caption("Huda's dream date didn't happen, but yours can!") 
     dream_date = st.radio(
-            "**Choose your dream date:**",
+            "**❀ Choose your dream date:**",
             [
                 "Movie night 🎬",
                 "Mystery date 🎁",
@@ -124,7 +124,7 @@ with st.form("participant_form", clear_on_submit=True):
         )
    #4 
     cooking_role = st.radio(
-            "**What role do you play when cooking with someone?**",
+            "**❀ What role do you play when cooking with someone?**",
             [
                 "Head Chef",
                 "Sous Chef",
@@ -135,7 +135,7 @@ with st.form("participant_form", clear_on_submit=True):
 
     #5
     favorite_meal = st.text_input(
-            "What’s your favorite meal of all-time?",
+            "❀**❀ What’s your favorite meal of all-time?**",
             key="favorite_meal_input"
         )
 
