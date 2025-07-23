@@ -115,7 +115,6 @@ with st.form("participant_form", clear_on_submit=True):
         )
     with col2:
         st.write("")
-        )
 
 
     dream_date = st.radio(
