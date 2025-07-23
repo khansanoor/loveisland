@@ -112,6 +112,7 @@ with st.form("participant_form", clear_on_submit=True):
         st.image(
             "https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/huda%20dream%20date.jpg?token=GHSAT0AAAAAADH47VQYBL7ESSWZM6R4XH2E2EBIEVA",
             width=150
+        )
     with col2:
         st.write("")
         )
