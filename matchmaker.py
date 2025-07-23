@@ -108,8 +108,9 @@ with st.form("participant_form", clear_on_submit=True):
 #3
     col1, col2 = st.columns([2, 1])  # 2:1 width ratio
     with col1:
+        st.markdown("### Choose your dream date:")
         dream_date = st.radio(
-            "Choose your dream date:",
+            "",
             [
                 "Sunset picnic 🌅",
                 "Adventure hike 🥾",
