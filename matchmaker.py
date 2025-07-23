@@ -120,7 +120,7 @@ with st.form("participant_form", clear_on_submit=True):
         )
     with col1:
         st.image(
-            "https://github.com/khansanoor/loveisland/blob/be60c2551dacbd9adcca55676b94e0316ee6204e/huda%20dream%20date.jpg",
+            "https://raw.githubusercontent.com/khansanoor/loveisland/main/huda%20dream%20date.jpg",
         use_container_width=True
         )
     
