@@ -96,21 +96,20 @@ with st.form("participant_form", clear_on_submit=True):
     # st.header("Tell Us About Yourself!")
     
 #1
-    name = st.text_input("What is your name?", key="name_input").strip()
+    name = st.text_input("**What is your name?**", key="name_input").strip()
     
     #st.subheader("Personality")
 #2  
     intro_extro = st.radio(
-        "Are you an extrovert or an introvert?",
+        "**Are you an extrovert or an introvert?**",
         ["Introvert", "Extrovert", "Ambi-vert"],
         key="intro_extro_input"
     )
 #3
     col1, col2 = st.columns([2, 1])  # 2:1 width ratio
     with col1:
-        # st.markdown("### Choose your dream date:")
         dream_date = st.radio(
-            "Choose your dream date:",
+            "**Choose your dream date:**",
             [
                 "Movie night 🎬",
                 "Mystery date 🎁",
