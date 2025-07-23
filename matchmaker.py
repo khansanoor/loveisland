@@ -107,7 +107,7 @@ with st.form("participant_form", clear_on_submit=True):
     )
 #3
     st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_dream_date.jpeg", width=100)
-        
+    st.inline_image_with_text("test") 
     dream_date = st.radio(
             "**Choose your dream date:**",
             [
