@@ -186,8 +186,6 @@ with st.form("participant_form", clear_on_submit=True):
                 "Favorite Meal": favorite_meal,
                 "Free Day Activity": free_day_activity_other if free_day_activity == "Something else (please specify)" else free_day_activity,
                 "Extrovert or an introvert?": intro_extro,
-            # ... include other answers you already have ...
-        }
                 # We are not collecting Gender or Looking For yet, so they are omitted
                 # If these columns exist in your Google Sheet, they will be filled with '' (empty string)
             }
