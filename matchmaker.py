@@ -4,13 +4,12 @@ import gspread # Library for Google Sheets
 import json # To parse the service account key from secrets
 
 # --- Configuration ---
-# Set the page configuration for better aesthetics
-st.set_page_config()
-#     page_title="Love Island Matchmaker",
-#     page_icon= "🌴",
-#     layout="centered",
-#     initial_sidebar_state="expanded"
-# )
+st.set_page_config(
+    page_title="Love Island Matchmaker",
+    page_icon="🌴",
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
 
 # --- Google Sheets Integration ---
 
@@ -85,7 +84,7 @@ def add_participant_to_sheet(participant_answers):
 
 # --- Streamlit UI (First Visible Elements) ---
 
-st.title("🌴 Love Island Matchmaker �")
+st.title("🌴 Love Island Matchmaker 💕")
 st.markdown("Welcome to the Villa! Fill out this form to get some fun insights!")
 
 # --- Load data at the start of the app ---
