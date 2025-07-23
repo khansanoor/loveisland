@@ -123,6 +123,46 @@ with st.form("participant_form", clear_on_submit=True):
             ]
         )
    #4 
+    cooking_role = st.radio(
+            "When cooking with someone, which role do you usually take?",
+            [
+                "Head Chef",
+                "Sous Chef",
+                "Adapt as needed"
+            ],
+            key="cooking_role_input"
+        )
+
+    #5
+    favorite_meal = st.text_input(
+            "What’s your all-time favorite meal?",
+            key="favorite_meal_input"
+        )
+
+    #6
+        free_day_activity = st.radio(
+            "If you had a day with zero responsibilities, how would you spend it?",
+            [
+                "Relax at home",
+                "Go on an adventure",
+                "Hang out with friends",
+                "Catch up on hobbies",
+                "Something else:"
+            ],
+            key="free_day_activity_input"
+        )
+    
+        # If user chooses 'Something else', show a text input to specify
+        if free_day_activity == "Something else (please specify)":
+            free_day_activity_other = st.text_input(
+                "Please specify:",
+                key="free_day_activity_other_input"
+            )
+        else:
+            free_day_activity_other = ""
+
+
+    
     intro_extro = st.radio(
             "**Are you an extrovert or an introvert?**",
             ["Introvert", "Extrovert", "Ambi-vert"],
@@ -141,8 +181,13 @@ with st.form("participant_form", clear_on_submit=True):
             new_participant_answers = {
                 "Name": name,
                 "What are you looking for?": looking_for,
-                "Choose your dream date:": dream_date,
-                "Are you an extrovert or an introvert?": intro_extro,
+                "Dream date:": dream_date,
+                "Cooking Role": cooking_role,
+                "Favorite Meal": favorite_meal,
+                "Free Day Activity": free_day_activity_other if free_day_activity == "Something else (please specify)" else free_day_activity,
+                "Extrovert or an introvert?": intro_extro,
+            # ... include other answers you already have ...
+        }
                 # We are not collecting Gender or Looking For yet, so they are omitted
                 # If these columns exist in your Google Sheet, they will be filled with '' (empty string)
             }
