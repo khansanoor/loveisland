@@ -94,15 +94,20 @@ participants_data = load_participants_from_sheet()
 # --- Participant Input Form (Step 1 Focus) ---
 with st.form("participant_form", clear_on_submit=True):
     st.header("Tell Us About Yourself!")
+    
+#1
     name = st.text_input("What is your name?", key="name_input").strip()
-
-    st.subheader("Personality")
+    
+    #st.subheader("Personality")
+#2  
     intro_extro = st.radio(
         "Are you an extrovert or an introvert?",
         ["Introvert", "Extrovert", "Ambi-vert"],
         key="intro_extro_input"
     )
-
+#3
+    
+    
     submitted = st.form_submit_button("Submit My Profile!")
 
     # Submitting to Gsheets
@@ -136,14 +141,14 @@ with st.form("participant_form", clear_on_submit=True):
 # --- Display All Islander Profiles (optional sidebar, for viewing data) ---
 # This section is kept for you to verify data is being saved and loaded.
 # It does NOT show information to other participants, only to you as the app owner/debugger.
-st.sidebar.header("Villa Management")
-st.sidebar.markdown("Manage participants and view profiles.")
+# st.sidebar.header("Villa Management")
+# st.sidebar.markdown("Manage participants and view profiles.")
 
-if participants_data:
-    st.sidebar.subheader("All Islander Profiles")
-    if st.sidebar.checkbox("Show All Profiles", key="show_all_profiles_checkbox"):
-        df = pd.DataFrame(list(participants_data.values()))
-        st.sidebar.dataframe(df)
-else:
-    st.sidebar.info("No Islanders have joined the Villa yet.") 
+# if participants_data:
+#     st.sidebar.subheader("All Islander Profiles")
+#     if st.sidebar.checkbox("Show All Profiles", key="show_all_profiles_checkbox"):
+#         df = pd.DataFrame(list(participants_data.values()))
+#         st.sidebar.dataframe(df)
+# else:
+#     st.sidebar.info("No Islanders have joined the Villa yet.") 
 
