@@ -316,10 +316,10 @@ with st.form("participant_form", clear_on_submit=False):
     )
 
 #22
-the_ick = st.text_input(
-    "❀ What’s a dealbreaker that instantly gives you the ick?",
-    key="the_ick_input"
-)
+    the_ick = st.text_input(
+        "❀ What’s a dealbreaker that instantly gives you the ick?",
+        key="the_ick_input"
+    )
     
     st.caption("Last, but not least...")
 #23
