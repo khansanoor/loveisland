@@ -193,10 +193,11 @@ with st.form("participant_form", clear_on_submit=True):
             "They’re on the couch, I need my space 🛋️",
             "Rock-paper-scissors decides 🪨📄✂️"
         ],
+        index=None,
         key="hot_night_input"
     )
     
-#10 
+#11 
     communication = st.radio(
         "**❀ How do you text?**",
         ["I reply in 0.2 seconds 📲",
@@ -207,7 +208,7 @@ with st.form("participant_form", clear_on_submit=True):
         key="communication_input"
     )
 
-#11
+#12
     vacation = st.radio(
         "**❀ What is your dream vacation?**",
         ["Beach 🏖️", "Mountains 🏔️", "Both please ✨"],
@@ -215,33 +216,33 @@ with st.form("participant_form", clear_on_submit=True):
         key="vacation_input"
     )
 
-#12
+#13
     favorite_meal = st.text_input(
             "**❀ What’s your favorite meal of all-time?**",
             key="favorite_meal_input"
         )
     
-#13
+#14
     comfort_show = st.text_input(
         "**❀ What’s your go-to comfort show or movie?**",
         key="comfort_show_input"
     )
 
     
-#14
+#15
     teleport_dinner = st.text_input(
         "**❀ If you could teleport anywhere for dinner tonight, where would you go?**",
         key="teleport_dinner_input"
     )
 
-#15 
+#16 
     bucket_list = st.text_input("**❀ What’s something on your bucket list?**",
         key="bucket_list_input"
     )
 
     
     st.caption("Last, but not least...")
-#16
+#17
     st.markdown("**❀ What's your vibe in the villa?**")
     preference = st.slider(
         label="",
@@ -318,7 +319,7 @@ with st.form("participant_form", clear_on_submit=True):
             }
     
             if add_participant_to_sheet(new_participant_answers):
-                st.success(f"Pack your bags {name} — you’ve made it into the villa! Your match will be revealed via inbox on the day of the event 💌")
+                st.success(f"Pack your bags {name} — you’ve made it into the villa! Your match will be revealed via email on the day of the event 💌")
                 st.balloons()
                 participants_data = load_participants_from_sheet()
             else:
