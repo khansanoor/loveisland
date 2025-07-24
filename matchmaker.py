@@ -397,7 +397,7 @@ with st.form("participant_form", clear_on_submit=False):
             missing_fields.append("What are your intentions in the villa?")
         
         if missing_fields:
-            st.error(f"Oh no! You've forgotten to answer the following fields: {', '.join(missing_fields)}")
+            st.error(f"Oh no! You've forgotten to answer the following questions: {', '.join(missing_fields)}")
         else:
             new_participant_answers = {
                 "Name": name,
