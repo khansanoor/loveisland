@@ -347,54 +347,54 @@ with st.form("participant_form", clear_on_submit=False):
 
     if submitted:
         missing_fields = []
-            if not name:
-                missing_fields.append("Name")
-            if not email:
-                missing_fields.append("Email")
-            if not looking_for:
-                missing_fields.append("What kind of vibe are you hoping for in a match?")
-            if not dream_date:
-                missing_fields.append("Choose your dream date")
-            if not cooking_role:
-                missing_fields.append("What role do you play when cooking with someone?")
-            if not free_day_activity:
-                missing_fields.append("How would you spend a day with no obligations?")
-            if not love_language:
-                missing_fields.append("What's your love language?")
-            if not polyamory:
-                missing_fields.append("Polyamory or Monogamy?")
-            if not islander_type:
-                missing_fields.append("What kind of Islander are you?")
-            if not jealousy_response:
-                missing_fields.append("Your match is flirting with someone else — what’s your move?")
-            if not who_to_save:
-                missing_fields.append("Someone’s getting dumped — who are you saving?")
-            if not dating_chaos:
-                missing_fields.append("What kind of chaos exists in your dating history?")
-            if not morning_night:
-                missing_fields.append("Morning person or a night owl?")
-            if not planner:
-                missing_fields.append("How would you describe yourself?")
-            if not recharge:
-                missing_fields.append("How do you recharge after a long day?")
-            if not hot_night:
-                missing_fields.append("It's 95°, one bed, no AC — what's your play?")
-            if not communication:
-                missing_fields.append("How do you text?")
-            if not split_or_steal:
-                missing_fields.append("Would you split the 50k or steal it?")
-            if not favorite_meal:
-                missing_fields.append("What’s your favorite meal of all-time?")
-            if not comfort_show:
-                missing_fields.append("What’s your go-to comfort show or movie?")
-            if not teleport_dinner:
-                missing_fields.append("If you could teleport anywhere for dinner tonight, where would you go?")
-            if not bucket_list:
-                missing_fields.append("What’s something on your bucket list?")
-            if not the_ick:
-                missing_fields.append("What’s a dealbreaker that instantly gives you the ick?")
-            if preference is None:
-                missing_fields.append("What are your intentions in the villa?")
+        if not name:
+            missing_fields.append("Name")
+        if not email:
+            missing_fields.append("Email")
+        if not looking_for:
+            missing_fields.append("What kind of vibe are you hoping for in a match?")
+        if not dream_date:
+            missing_fields.append("Choose your dream date")
+        if not cooking_role:
+            missing_fields.append("What role do you play when cooking with someone?")
+        if not free_day_activity:
+            missing_fields.append("How would you spend a day with no obligations?")
+        if not love_language:
+            missing_fields.append("What's your love language?")
+        if not polyamory:
+            missing_fields.append("Polyamory or Monogamy?")
+        if not islander_type:
+            missing_fields.append("What kind of Islander are you?")
+        if not jealousy_response:
+            missing_fields.append("Your match is flirting with someone else — what’s your move?")
+        if not who_to_save:
+            missing_fields.append("Someone’s getting dumped — who are you saving?")
+        if not dating_chaos:
+            missing_fields.append("What kind of chaos exists in your dating history?")
+        if not morning_night:
+            missing_fields.append("Morning person or a night owl?")
+        if not planner:
+            missing_fields.append("How would you describe yourself?")
+        if not recharge:
+            missing_fields.append("How do you recharge after a long day?")
+        if not hot_night:
+            missing_fields.append("It's 95°, one bed, no AC — what's your play?")
+        if not communication:
+            missing_fields.append("How do you text?")
+        if not split_or_steal:
+            missing_fields.append("Would you split the 50k or steal it?")
+        if not favorite_meal:
+            missing_fields.append("What’s your favorite meal of all-time?")
+        if not comfort_show:
+            missing_fields.append("What’s your go-to comfort show or movie?")
+        if not teleport_dinner:
+            missing_fields.append("If you could teleport anywhere for dinner tonight, where would you go?")
+        if not bucket_list:
+            missing_fields.append("What’s something on your bucket list?")
+        if not the_ick:
+            missing_fields.append("What’s a dealbreaker that instantly gives you the ick?")
+        if preference is None:
+            missing_fields.append("What are your intentions in the villa?")
         
             if missing_fields:
                 st.error(f"Oh no! You've forgotten to answer the following fields: {', '.join(missing_fields)}")
