@@ -107,7 +107,7 @@ with st.form("participant_form", clear_on_submit=True):
         "**❀ What kind of vibe are you hoping for in a match?**",
         ["Deep connection 💫", "Fun and flirty 😍", "Friendly ✌️", "Let’s see where it goes 🎲"],
         max_selections=2,
-        placeholder="pick upto 2 options 💕",
+        placeholder="Pick upto 2 options 💕",
         key="match_vibe_input"
     )
 
@@ -154,7 +154,7 @@ with st.form("participant_form", clear_on_submit=True):
 #6
 
     intro_extro = st.radio(
-            "**❀ Extrovert or an introvert?**",
+            "**❀ Are you an extrovert or an introvert?**",
             ["Introvert", "Extrovert", "Ambi-vert"],
             index=None,
             key="intro_extro_input"
