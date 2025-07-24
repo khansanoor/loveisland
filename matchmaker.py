@@ -104,15 +104,15 @@ with st.form("participant_form", clear_on_submit=False):
 #2  
     looking_for = st.multiselect(
         "**❀ What kind of vibe are you hoping for in a match?**",
-        ["Deep connection 💫", "Fun and flirty 😍", "Friendly ✌️", "Let’s see where it goes 🎲"],
+        ["Deep connection", "Fun and flirty", "Friendly", "Let’s see where it goes"],
         max_selections=2,
-        placeholder="Pick upto 2 options 💕",
+        placeholder="Pick upto 2 options",
         key="match_vibe_input"
     )
 
     # looking_for = st.radio(
     #     "**❀ What are you looking for?**",
-    #     ["Romance 💕", "Friends 🤝", "Both 💞"], index=None,
+    #     ["Romance", "Friends", "Both"], index=None,
 
     #     key="looking_for_input"
     # )
@@ -122,11 +122,11 @@ with st.form("participant_form", clear_on_submit=False):
     st.caption("Huda's dream date didn't happen, but yours can!") 
     dream_date = st.radio(
             "**❀ Choose your dream date:**",
-            ["Movie night 🎬",
-            "Mystery date 🎁",
-            "Sunset picnic 🌅",
-            "Bookstore browse 📚",
-            "Explore a neighborhood 🏙️"], 
+            ["Movie night",
+            "Mystery date",
+            "Sunset picnic",
+            "Bookstore browse",
+            "Explore a neighborhood"], 
             index=None,
             key="dream_date_input"
         )
@@ -155,9 +155,9 @@ with st.form("participant_form", clear_on_submit=False):
     love_language = st.radio(
         "**❀ What's your love language?**",
         [
-            "Words that melt me 💬",
-            "Physical touch 🤗",
-            "Gifts 💝",
+            "Words that melt me",
+            "Physical touch",
+            "Gifts",
             "Quality time",
             "Do stuff for me pls"
         ],
@@ -169,9 +169,9 @@ with st.form("participant_form", clear_on_submit=False):
     polyamory = st.radio(
         "**❀ Polyamory or Monogamy?**",
         [
-            "I’ve got love to go around 💞",
-            "Maybe open to it 🤔",
-            "Prefer monogamy 💍"
+            "I’ve got love to go around",
+            "Maybe open to it",
+            "Prefer monogamy"
         ],
         index=None,
         key="polyamory_preference"
@@ -181,9 +181,9 @@ with st.form("participant_form", clear_on_submit=False):
     islander_type = st.radio(
         "**❀ What kind of Islander are you?**",
         [
-            "The heartbreaker 💔",
-            "The hopeless romantic 💕",
-            "The chaotic one 😈"
+            "The heartbreaker",
+            "The hopeless romantic",
+            "The chaotic one"
         ],
         index=None,
         key="islander_type_input"
@@ -193,10 +193,10 @@ with st.form("participant_form", clear_on_submit=False):
     jealousy_response = st.radio(
         "**❀ Your match is flirting with someone else — what’s your move?**",
         [
-            "Pull them for a chat 😤",
-            "Give them the silent treatment 😶",
-            "Flirt with someone hotter 😘",
-            "Cry 😭"
+            "Pull them for a chat",
+            "Give them the silent treatment",
+            "Flirt with someone hotter",
+            "Cry"
         ],
         index=None,
         key="jealousy_response_input"
@@ -208,8 +208,8 @@ with st.form("participant_form", clear_on_submit=False):
         [
             "My villa bestie",
             "My romantic connection",
-            "The underdog 🐶",
-            "Whoever’s hottest 🔥"
+            "The underdog",
+            "Whoever’s hottest"
         ],
         index=None,
         key="who_to_save_input"
@@ -219,10 +219,10 @@ with st.form("participant_form", clear_on_submit=False):
     dating_chaos = st.radio(
         "**❀ What kind of chaos exists in your dating history?**",
         [
-            "Dated a friend's ex 👀",
-            "Ghosted someone... more than once 👻",
-            "Back with an ex (again) ♻️",
-            "Caught in a love triangle 🔺",
+            "Dated a friend's ex",
+            "Ghosted someone... more than once",
+            "Back with an ex (again)",
+            "Caught in a love triangle",
             "Drama-free ✨"
         ],
         index=None,
@@ -232,7 +232,7 @@ with st.form("participant_form", clear_on_submit=False):
 #12
     morning_night = st.radio(
         "**❀ Morning person or a night owl?**",
-        ["Morning 🌞", "Night 🌙", "Whenever I wake up 😴"],
+        ["Morning", "Night", "Whenever I wake up"],
         index=None,
         key="morning_night_input"
     )
@@ -240,7 +240,7 @@ with st.form("participant_form", clear_on_submit=False):
 #13
     planner = st.radio(
         "**❀ How would you describe yourself?**",
-        ["Planner 📋", "Go with the flow 🕊", "Bit of both"],
+        ["Planner", "Go with the flow", "Bit of both"],
         index=None,
         key="personality_input"
     )
@@ -257,9 +257,9 @@ with st.form("participant_form", clear_on_submit=False):
     hot_night = st.radio(
         "**❀ It's 95°, one bed, no AC — what's your play?**",
         [
-            "We're sharing 🔥",
-            "They’re on the couch, I need my space 🛋️",
-            "Rock-paper-scissors decides ✂️"
+            "We're sharing",
+            "They’re on the couch, I need my space",
+            "Rock-paper-scissors decides"
         ],
         index=None,
         key="hot_night_input"
@@ -269,8 +269,8 @@ with st.form("participant_form", clear_on_submit=False):
     communication = st.radio(
         "**❀ How do you text?**",
         [
-            "I reply in 0.2 seconds 📲",
-            "Call me instead — I hate texting ☎",
+            "I reply in 0.2 seconds",
+            "Call me instead — I hate texting",
             "I leave you on read — just catch me irl",
             "I vanish for days, then send paragraphs and voice notes"
         ],
@@ -289,9 +289,9 @@ with st.form("participant_form", clear_on_submit=False):
     split_or_steal = st.radio(
         "**❀ Would you split the 50k or steal it?**",
         [
-            "Share, of course 🥰",
-            "Depends who I’m with 🤔",
-            "It’s giving villain era 😈"
+            "Share, of course",
+            "Depends who I’m with",
+            "It’s giving villain era"
         ],
         index=None,
         key="split_or_steal_input"
