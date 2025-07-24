@@ -178,7 +178,7 @@ with st.form("participant_form", clear_on_submit=True):
 #9
     personality = st.radio(
         "**❀ Planner or go-with-the-flow?**",
-        ["Planner 📅", "Go with the flow 🌊", "Bit of both 🌈"],
+        ["Planner", "Go with the flow", "Bit of both"],
         key="personality_input"
     )
 #10
