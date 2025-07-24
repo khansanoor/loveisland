@@ -149,7 +149,7 @@ with st.form("participant_form", clear_on_submit=True):
         )
 
     #6
-    free_day_activity = st.selectbox(
+    free_day_activity = st.radio(
             "**❀ How would you spend a day with no obligations?**",
             [
                 "Relax at home",
@@ -238,8 +238,17 @@ with st.form("participant_form", clear_on_submit=True):
                 "Dream date:": dream_date,
                 "Cooking Role": cooking_role,
                 "Favorite Meal": favorite_meal,
-                "Free Day Activity": free_day_activity_other if free_day_activity == "Something else (please specify)" else free_day_activity,
+                "Free Day Activity": free_day_activity_other,
                 "Extrovert or an introvert?": intro_extro,
+                "Morning person or a night owl?": morning_night,
+                "Planner or go-with-the-flow?": personality,
+                "How do you recharge after a long day?": recharge,
+                "What's on your bucket list?": bucket_list,
+                "Texter or a caller?": communication,
+                "Go-to comfort show or movie?": comfort_show,
+                "Dream vacation?": vacation,
+                "Teleport for dinner to": teleport_dinner,
+
                 # We are not collecting Gender or Looking For yet, so they are omitted
                 # If these columns exist in your Google Sheet, they will be filled with '' (empty string)
             }
