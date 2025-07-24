@@ -113,7 +113,8 @@ with st.form("participant_form", clear_on_submit=True):
 
     # looking_for = st.radio(
     #     "**❀ What are you looking for?**",
-    #     ["Romance 💕", "Friends 🤝", "Both 💞"],
+    #     ["Romance 💕", "Friends 🤝", "Both 💞"], index=None,
+
     #     key="looking_for_input"
     # )
     
@@ -122,27 +123,23 @@ with st.form("participant_form", clear_on_submit=True):
     st.caption("Huda's dream date didn't happen, but yours can!") 
     dream_date = st.radio(
             "**❀ Choose your dream date:**",
-            [
-                "Movie night 🎬",
-                "Mystery date 🎁",
-                "Sunset picnic 🌅",
-                "Bookstore browse 📚",
-                "Explore a neighborhood 🏙️"
-            ]
+            ["Movie night 🎬",
+            "Mystery date 🎁",
+            "Sunset picnic 🌅",
+            "Bookstore browse 📚",
+            "Explore a neighborhood 🏙️"], 
+            index=None,
+            key="dream_date_input"
         )
-   #4 
+#4 
     cooking_role = st.radio(
             "**❀ What role do you play when cooking with someone?**",
-            [
-                "Head Chef",
-                "Sous Chef",
-                "Adapt as needed"
-            ],
+            ["Head Chef","Sous Chef","Adapt as needed"],
             index=None,
             key="cooking_role_input"
         )
 
-    #6
+#5
     free_day_activity = st.radio(
             "**❀ How would you spend a day with no obligations?**",
             [
@@ -150,56 +147,62 @@ with st.form("participant_form", clear_on_submit=True):
                 "Go on an adventure",
                 "Hang out with friends",
                 "Catch up on hobbies"
-            ],
+            ], index=None,
             key="free_day_activity_input"
         )
 
-#7
+#6
 
     intro_extro = st.radio(
             "**❀ Extrovert or an introvert?**",
             ["Introvert", "Extrovert", "Ambi-vert"],
+            index=None,
             key="intro_extro_input"
         )
 
-#8
+#7
     
     morning_night = st.radio(
         "**❀ Morning person or a night owl?**",
         ["Morning 🌞", "Night 🌙", "Whenever I wake up 😴"],
+        index=None,
         key="morning_night_input"
     )
 
-#9
+#8
     personality = st.radio(
         "**❀ How would you describe yourself?**",
         ["Planner 📋", "Go with the flow 🕊", "Bit of both"],
+        index=None,
         key="personality_input"
     )
 
-#10
+#9
     recharge = st.radio(
         "**❀ How do you recharge after a long day?**",
         ["Alone time", "With friends", "Music or TV", "Journal"],
+        index=None,
         key="recharge_input"
     )
 
 
-#12 
+#10 
     communication = st.radio(
         "**❀ Are you more of a texter or a caller?**",
         ["Text 💬", "Call 📞", "Voice notes 🎙️"],
+        index=None,
         key="communication_input"
     )
 
-#14
+#11
     vacation = st.radio(
         "**❀ What is your dream vacation?**",
         ["Beach 🏖️", "Mountains 🏔️", "Both please ✨"],
+        index=None,
         key="vacation_input"
     )
 
-#5
+#12
     favorite_meal = st.text_input(
             "**❀ What’s your favorite meal of all-time?**",
             key="favorite_meal_input"
@@ -212,13 +215,13 @@ with st.form("participant_form", clear_on_submit=True):
     )
 
     
-#15
+#14
     teleport_dinner = st.text_input(
         "**❀ If you could teleport anywhere for dinner tonight, where would you go?**",
         key="teleport_dinner_input"
     )
 
-#11 
+#15 
     bucket_list = st.text_input(
         "**❀ What’s something on your bucket list?**",
         key="bucket_list_input"
