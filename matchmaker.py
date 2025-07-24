@@ -142,12 +142,6 @@ with st.form("participant_form", clear_on_submit=True):
             key="cooking_role_input"
         )
 
-    #5
-    favorite_meal = st.text_input(
-            "**❀ What’s your favorite meal of all-time?**",
-            key="favorite_meal_input"
-        )
-
     #6
     free_day_activity = st.radio(
             "**❀ How would you spend a day with no obligations?**",
@@ -190,11 +184,6 @@ with st.form("participant_form", clear_on_submit=True):
         key="recharge_input"
     )
 
-#11 
-    bucket_list = st.text_input(
-        "**❀ What’s something on your bucket list?**",
-        key="bucket_list_input"
-    )
 
 #12 
     communication = st.radio(
@@ -203,18 +192,25 @@ with st.form("participant_form", clear_on_submit=True):
         key="communication_input"
     )
 
-#13
-    comfort_show = st.text_input(
-        "**❀ What’s your go-to comfort show or movie?**",
-        key="comfort_show_input"
-    )
-
 #14
     vacation = st.radio(
         "**❀ What is your dream vacation?**",
         ["Beach 🏖️", "Mountains 🏔️", "Both please ✨"],
         key="vacation_input"
     )
+
+#5
+    favorite_meal = st.text_input(
+            "**❀ What’s your favorite meal of all-time?**",
+            key="favorite_meal_input"
+        )
+    
+#13
+    comfort_show = st.text_input(
+        "**❀ What’s your go-to comfort show or movie?**",
+        key="comfort_show_input"
+    )
+
     
 #15
     teleport_dinner = st.text_input(
@@ -222,6 +218,13 @@ with st.form("participant_form", clear_on_submit=True):
         key="teleport_dinner_input"
     )
 
+#11 
+    bucket_list = st.text_input(
+        "**❀ What’s something on your bucket list?**",
+        key="bucket_list_input"
+    )
+
+    
     st.caption("Last, but not least...")
 #16
     st.markdown("**❀ What's your vibe in the villa?**")
