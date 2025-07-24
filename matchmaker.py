@@ -284,7 +284,7 @@ with st.form("participant_form", clear_on_submit=True):
         else:
             new_participant_answers = {
                 "Name": name,
-                "What are you looking for?": looking_for,
+                "What are you looking for?": ", ".join(looking_for),
                 "Dream date": dream_date,
                 "Cooking Role": cooking_role,
                 "Free Day Activity": free_day_activity,
