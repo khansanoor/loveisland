@@ -185,10 +185,24 @@ with st.form("participant_form", clear_on_submit=True):
     )
 
 
+#10
+    hot_night = st.radio(
+        "**❀ It's 95°, one bed, no AC — what's your play?**",
+        [
+            "We're sharing — the heat’s already between us 🔥",
+            "They’re on the couch, I need my space 🛋️",
+            "Rock-paper-scissors decides 🪨📄✂️"
+        ],
+        key="hot_night_input"
+    )
+    
 #10 
     communication = st.radio(
-        "**❀ Are you more of a texter or a caller?**",
-        ["Text 💬", "Call 📞", "Voice notes 🎙️"],
+        "**❀ How do you text?**",
+        ["I reply in 0.2 seconds 📲",
+         "Call me instead — I hate texting ☎",
+         "I leave you on read — just catch me irl",
+         "I vanish for days, then send paragraphs and voice notes 📝"],
         index=None,
         key="communication_input"
     )
@@ -263,6 +277,8 @@ with st.form("participant_form", clear_on_submit=True):
             missing_fields.append("Planner or go-with-the-flow?")
         if not recharge:
             missing_fields.append("How do you recharge after a long day?")
+        if not hot_night:
+            missing_fields.append("Hot night")
         if not communication:
             missing_fields.append("Texter or a caller?")
         if not vacation:
@@ -291,6 +307,7 @@ with st.form("participant_form", clear_on_submit=True):
                 "Morning person or a night owl": morning_night,
                 "Planner or go-with-the-flow?": personality,
                 "How do you recharge after a long day": recharge,
+                "Hot night": hot_night,
                 "Texter or a caller": communication,
                 "Dream vacation": vacation,
                 "Favorite Meal": favorite_meal,
