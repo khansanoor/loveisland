@@ -322,7 +322,7 @@ with st.form("participant_form", clear_on_submit=False):
                 "Extrovert or an introvert": intro_extro,
                 "Polyamory or Monogamy": polyamory,
                 "Morning person or a night owl": morning_night,
-                "Planner or go-with-the-flow?": personality,
+                "Planner or go-with-the-flow": personality,
                 "How do you recharge after a long day": recharge,
                 "Hot night": hot_night,
                 "Texter or a caller": communication,
