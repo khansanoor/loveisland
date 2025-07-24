@@ -256,14 +256,14 @@ with st.form("participant_form", clear_on_submit=False):
     st.markdown("**❀ What's your vibe in the villa?**")
     preference = st.slider(
         label="",
-        min_value=0,
+        min_value=1,
         max_value=10,
         value=5,
         step=1,
         format="%d",
         key="planning_style_input"
     )
-    st.caption("0 = Just here for friends 🤝, 10 = Looking for romance 💘")
+    st.caption("1 = Just here for friends 🤝, 10 = Looking for romance 💘")
 
 
     submitted = st.form_submit_button("Submit My Profile!")
