@@ -100,7 +100,10 @@ with st.form("participant_form", clear_on_submit=False):
     name = st.text_input("**❀ What is your name?**", key="name_input").strip()
 
     email = st.text_input("**❀ Enter your email, so we can send you your match! 📧**", key="email_input")
-  
+
+    pronouns = st.text_input("**❀ What are your pronouns?**", key="pronoun_input").strip()
+
+    gender_preference = st.text_input("**❀ Who are you into?**", key="pronoun_input").strip()
 #2  
     looking_for = st.multiselect(
         "**❀ What kind of vibe are you hoping for in a match?**",
@@ -223,7 +226,7 @@ with st.form("participant_form", clear_on_submit=False):
             "Ghosted someone... more than once",
             "Back with an ex (again)",
             "Caught in a love triangle",
-            "Drama-free ✨"
+            "Drama-free"
         ],
         index=None,
         key="dating_chaos_input"
