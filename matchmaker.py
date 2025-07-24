@@ -104,7 +104,7 @@ with st.form("participant_form", clear_on_submit=True):
     # st.markdown("❀")
 #2  
     match_vibe = st.multiselect(
-        "**❀ What kind of vibe are you hoping for in a match?** _(Pick 2)_",
+        "**❀ What kind of vibe are you hoping for in a match?**",
         ["Deep connection 💫", "Fun and flirty 😍", "Friendly ✌️", "Let’s see where it goes 🎲"],
         max_selections=2,
         placeholder="pick upto 2 options 💕",
@@ -162,7 +162,7 @@ with st.form("participant_form", clear_on_submit=True):
 #7
 
     intro_extro = st.radio(
-            "**❀ Are you an extrovert or an introvert?**",
+            "**❀ Extrovert or an introvert?**",
             ["Introvert", "Extrovert", "Ambi-vert"],
             key="intro_extro_input"
         )
@@ -170,14 +170,14 @@ with st.form("participant_form", clear_on_submit=True):
 #8
     
     morning_night = st.radio(
-        "**❀ Are you a morning person or a night owl?**",
+        "**❀ Morning person or a night owl?**",
         ["Morning 🌞", "Night 🌙", "Whenever I wake up 😴"],
         key="morning_night_input"
     )
 
 #9
     personality = st.radio(
-        "**❀ Are you more of a planner or go-with-the-flow?**",
+        "**❀ Planner or go-with-the-flow?**",
         ["Planner 📅", "Go with the flow 🌊", "Bit of both 🌈"],
         key="personality_input"
     )
