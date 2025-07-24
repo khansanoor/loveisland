@@ -178,14 +178,15 @@ with st.form("participant_form", clear_on_submit=True):
 
 #9
     spontaneity_planning = st.slider(
-        "**❀ Do you prefer to plan 📝 OR go-with-the-flow🌊?**", # Label for the slider itself
+        "**❀ What’s your vibe: plan it or wing it? 📋🕊️**", # Label for the slider itself
         min_value=1,
         max_value=5,
         value=3, # Default value
         step=1,
         key="spontaneity_planning_input"
     )
-    
+    st.caption("1 = Ultimate planner 📝 · 5 = Totally wing it🕊️")
+
     # personality = st.radio(
     #     "**❀ Planner or go-with-the-flow?**",
     #     ["Planner", "Go with the flow", "Bit of both"],
