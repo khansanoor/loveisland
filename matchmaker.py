@@ -160,6 +160,16 @@ with st.form("participant_form", clear_on_submit=False):
         )
 
 #7
+    polyamory = st.radio(
+        "**❀ Polyamory or Monogamy?**",
+         [
+        "I’ve got love to go around 💞",
+        "Maybe open to it 🤔",
+        "Prefer monogamy 💍"],
+        index=None,
+        key="polyamory_preference"
+
+#7
     
     morning_night = st.radio(
         "**❀ Morning person or a night owl?**",
@@ -274,6 +284,8 @@ with st.form("participant_form", clear_on_submit=False):
             missing_fields.append("How would you spend a day with no obligations?")
         if not intro_extro:
             missing_fields.append("Are you an extrovert or an introvert?")
+        if not polyamory:
+            missing_fields.append("Polyamory or Monogamy?")
         if not morning_night:
             missing_fields.append("Morning person or a night owl?")
         if not personality:
@@ -308,6 +320,7 @@ with st.form("participant_form", clear_on_submit=False):
                 "Cooking Role": cooking_role,
                 "Free Day Activity": free_day_activity,
                 "Extrovert or an introvert": intro_extro,
+                "Polyamory or Monogamy": polyamory,
                 "Morning person or a night owl": morning_night,
                 "Planner or go-with-the-flow?": personality,
                 "How do you recharge after a long day": recharge,
