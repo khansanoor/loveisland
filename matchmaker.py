@@ -262,44 +262,47 @@ with st.form("participant_form", clear_on_submit=True):
         missing_fields = []
         if not name:
             missing_fields.append("Name")
+        if not email:
+            missing_fields.append("Email")
         if not looking_for:
-            missing_fields.append("What are you looking for?")
+            missing_fields.append("What kind of vibe are you hoping for in a match?")
         if not dream_date:
-            missing_fields.append("Dream date")
+            missing_fields.append("Choose your dream date:")
         if not cooking_role:
-            missing_fields.append("Cooking Role")
+            missing_fields.append("What role do you play when cooking with someone?")
         if not free_day_activity:
-            missing_fields.append("Free Day Activity")
+            missing_fields.append("How would you spend a day with no obligations?")
         if not intro_extro:
-            missing_fields.append("Extrovert or an introvert?")
+            missing_fields.append("Are you an extrovert or an introvert?")
         if not morning_night:
             missing_fields.append("Morning person or a night owl?")
         if not personality:
-            missing_fields.append("Planner or go-with-the-flow?")
+            missing_fields.append("How would you describe yourself?")
         if not recharge:
             missing_fields.append("How do you recharge after a long day?")
         if not hot_night:
-            missing_fields.append("Hot night")
+            missing_fields.append("It's 95°, one bed, no AC — what's your play?")
         if not communication:
-            missing_fields.append("Texter or a caller?")
+            missing_fields.append("How do you text?")
         if not vacation:
-            missing_fields.append("Dream vacation?")
+            missing_fields.append("What is your dream vacation?")
         if not favorite_meal:
-            missing_fields.append("Favorite Meal")
+            missing_fields.append("What’s your favorite meal of all-time?")
         if not comfort_show:
-            missing_fields.append("Go-to comfort show or movie?")
+            missing_fields.append(" What’s your go-to comfort show or movie?")
         if not teleport_dinner:
-            missing_fields.append("Teleport for dinner to")
+            missing_fields.append("If you could teleport anywhere for dinner tonight, where would you go?")
         if not bucket_list:
-            missing_fields.append("What's on your bucket list?")
+            missing_fields.append("What’s something on your bucket list?")
         if not preference:
-            missing_fields.append("Just here for friends vs looking for romance?")
+            missing_fields.append("What's your vibe in the villa?")
     
         if missing_fields:
-            st.error(f"Please fill out the following fields before submitting: {', '.join(missing_fields)}")
+            st.error(f"Oh no! You've forgotten to answer the following fields: {', '.join(missing_fields)}")
         else:
             new_participant_answers = {
                 "Name": name,
+                "Email": email,
                 "What are you looking for?": ", ".join(looking_for),
                 "Dream date": dream_date,
                 "Cooking Role": cooking_role,
@@ -323,7 +326,7 @@ with st.form("participant_form", clear_on_submit=True):
                 st.balloons()
                 participants_data = load_participants_from_sheet()
             else:
-                st.error("Failed to add your profile to the Google Sheet. Please try again.")
+                st.error("Failed to add you to the villa. Please reach out to organizers if the issue persists.")
 
 
 # --- Placeholder for the insights sections ---
