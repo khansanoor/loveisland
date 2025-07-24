@@ -222,9 +222,9 @@ with st.form("participant_form", clear_on_submit=True):
         key="teleport_dinner_input"
     )
 
-st.caption("Last, but not least...")
+    st.caption("Last, but not least...")
 #16
-st.markdown("**❀ What's your vibe in the villa?**")
+    st.markdown("**❀ What's your vibe in the villa?**")
     preference = st.slider(
         label="",
         min_value=0,
