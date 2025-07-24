@@ -281,6 +281,7 @@ with st.form("participant_form", clear_on_submit=False):
     intro_extro = st.radio(
         "**❀ Are you an extrovert or an introvert?**",
         ["Introvert", "Extrovert", "Ambi-vert"],
+        index=None,
         key="intro_extro_input"
     )
 
