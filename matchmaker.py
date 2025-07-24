@@ -148,7 +148,7 @@ with st.form("participant_form", clear_on_submit=True):
         )
 
     #6
-    free_day_activity = st.radio(
+    free_day_activity = st.selectbox(
             "**❀ How would you spend a day with no obligations?**",
             [
                 "Relax at home",
