@@ -92,7 +92,7 @@ st.markdown("**Help us find a match for you in the villa ♥**")
 participants_data = load_participants_from_sheet()
 
 # --- Participant Input Form (Step 1 Focus) ---
-with st.form("participant_form", clear_on_submit=True):
+with st.form("participant_form", clear_on_submit=FALSE):
     # st.header("Tell Us About Yourself!")
     
 #1
