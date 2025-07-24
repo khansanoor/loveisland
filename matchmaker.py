@@ -216,14 +216,15 @@ with st.form("participant_form", clear_on_submit=True):
 
     
 #14
+    st.markdown("**❀ If you could teleport anywhere for dinner tonight, where would you go?**")
     teleport_dinner = st.text_input(
-        "**❀ If you could teleport anywhere for dinner tonight, where would you go?**",
+        "",
         key="teleport_dinner_input"
     )
 
 #15 
     st.markdown("**❀ What’s something on your bucket list?**")
-    bucket_list = st.text_input(
+    bucket_list = st.text_input("",
         key="bucket_list_input"
     )
 
