@@ -107,7 +107,7 @@ with st.form("participant_form", clear_on_submit=True):
         "**❀ What kind of vibe are you hoping for in a match?** _(Pick 2)_",
         ["Deep connection 💫", "Fun and flirty 😍", "Friendly ✌️", "Let’s see where it goes 🎲"],
         max_selections=2,
-        placeholder="pick upto 2 options 💖",
+        placeholder="pick upto 2 options 💕",
         key="match_vibe_input"
     )
 
