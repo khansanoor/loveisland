@@ -355,6 +355,10 @@ with st.form("participant_form", clear_on_submit=False):
             missing_fields.append("Name")
         if not email:
             missing_fields.append("Email")
+        if not pronouns:
+            missing_fields.append("Pronouns")
+        if not gender_preference:
+            missing_fields.append("Gender Preference")
         if not looking_for:
             missing_fields.append("What kind of vibe are you hoping for in a match?")
         if not dream_date:
@@ -406,6 +410,7 @@ with st.form("participant_form", clear_on_submit=False):
             new_participant_answers = {
                 "Name": name,
                 "Email": email,
+                "Pronouns": pronouns,
                 "What are you looking for?": ", ".join(looking_for),
                 "Dream Date": dream_date,
                 "Cooking Role": cooking_role,
