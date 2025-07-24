@@ -178,7 +178,7 @@ with st.form("participant_form", clear_on_submit=True):
 
 #9
     spontaneity_planning = st.slider(
-        "**❀ Planner(1) or go-with-the-flow(5)?**", # Label for the slider itself
+        "**❀ Do you prefer to plan 📝 OR go-with-the-flow🌊?**", # Label for the slider itself
         min_value=1,
         max_value=5,
         value=3, # Default value
