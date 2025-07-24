@@ -103,11 +103,18 @@ with st.form("participant_form", clear_on_submit=True):
 
     # st.markdown("❀")
 #2  
-    looking_for = st.radio(
-        "**❀ What are you looking for?**",
-        ["Romance 💕", "Friends 🤝", "Both 💞"],
-        key="looking_for_input"
+    match_vibe = st.multiselect(
+        "**❀ What kind of vibe are you hoping for in a match?** _(Pick 2)_",
+        ["Deep connection 💫", "Fun and flirty 😍", "Friendly ✌️", "Let’s see where it goes 🎲"],
+        max_selections=2,
+        key="match_vibe_input"
     )
+
+    # looking_for = st.radio(
+    #     "**❀ What are you looking for?**",
+    #     ["Romance 💕", "Friends 🤝", "Both 💞"],
+    #     key="looking_for_input"
+    # )
     
 #3
     st.image("https://raw.githubusercontent.com/khansanoor/loveisland/refs/heads/main/images/huda_dream_date.jpeg", width=100)
@@ -169,12 +176,51 @@ with st.form("participant_form", clear_on_submit=True):
 
 #9
     personality = st.radio(
-        "**🧭 Are you more of a planner or go-with-the-flow?**",
+        "**❀ Are you more of a planner or go-with-the-flow?**",
         ["Planner 📅", "Go with the flow 🌊", "Bit of both 🌈"],
         key="personality_input"
     )
+#10
+    recharge = st.radio(
+        "**❀ How do you recharge after a long day?**",
+        ["Alone time", "With friends", "Music or TV", "Journal"],
+        key="recharge_input"
+    )
+
+#11 
+    bucket_list = st.text_input(
+        "**❀ What’s something on your bucket list?**",
+        key="bucket_list_input"
+    )
+
+#12 
+    communication = st.radio(
+        "**❀ Are you more of a texter or a caller?**",
+        ["Text 💬", "Call 📞", "Voice notes 🎙️"],
+        key="communication_input"
+    )
+
+#13
+    comfort_show = st.text_input(
+        "**❀ What’s your go-to comfort show or movie?**",
+        key="comfort_show_input"
+    )
+
+#14
+    vacation = st.radio(
+        "**❀ What is your dream vacation?**",
+        ["Beach 🏖️", "Mountains 🏔️", "Both please ✨"],
+        key="vacation_input"
+    )
     
-    
+#15
+    teleport_dinner = st.text_input(
+        "**❀ If you could teleport anywhere for dinner tonight, where would you go?**",
+        key="teleport_dinner_input"
+    )
+
+
+
     submitted = st.form_submit_button("Submit My Profile!")
 
     # Submitting to Gsheets
