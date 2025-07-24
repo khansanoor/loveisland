@@ -238,7 +238,7 @@ with st.form("participant_form", clear_on_submit=False):
     )
 
 #13
-    personality = st.radio(
+    planner = st.radio(
         "**❀ How would you describe yourself?**",
         ["Planner 📋", "Go with the flow 🕊", "Bit of both"],
         index=None,
@@ -278,6 +278,13 @@ with st.form("participant_form", clear_on_submit=False):
         key="communication_input"
     )
 #17
+    intro_extro = st.radio(
+        "Are you an extrovert or an introvert?",
+        ["Introvert", "Extrovert", "Ambi-vert"],
+        key="intro_extro_input"
+    )
+
+ #18   
     split_or_steal = st.radio(
         "**❀ Would you split the 50k or steal it?**",
         [
@@ -291,38 +298,38 @@ with st.form("participant_form", clear_on_submit=False):
 
 
     
-#18
+#19
     favorite_meal = st.text_input(
             "**❀ What’s your favorite meal of all-time?**",
             key="favorite_meal_input"
         )
     
-#19
+#20
     comfort_show = st.text_input(
         "**❀ What’s your go-to comfort show or movie?**",
         key="comfort_show_input"
     )
 
     
-#20
+#21
     teleport_dinner = st.text_input(
         "**❀ If you could teleport anywhere for dinner tonight, where would you go?**",
         key="teleport_dinner_input"
     )
 
-#21
+#22
     bucket_list = st.text_input("**❀ What’s something on your bucket list?**",
         key="bucket_list_input"
     )
 
-#22
+#23
     the_ick = st.text_input(
         "❀ What’s a dealbreaker that instantly gives you the ick?",
         key="the_ick_input"
     )
     
     st.caption("Last, but not least...")
-#23
+#24
     st.markdown("**❀ What are your intentions in the villa?**")
     preference = st.slider(
         label="",
@@ -338,8 +345,8 @@ with st.form("participant_form", clear_on_submit=False):
 
     submitted = st.form_submit_button("Submit My Profile!")
 
-    if submitted:
-        missing_fields = []
+if submitted:
+    missing_fields = []
         if not name:
             missing_fields.append("Name")
         if not email:
@@ -347,18 +354,26 @@ with st.form("participant_form", clear_on_submit=False):
         if not looking_for:
             missing_fields.append("What kind of vibe are you hoping for in a match?")
         if not dream_date:
-            missing_fields.append("Choose your dream date:")
+            missing_fields.append("Choose your dream date")
         if not cooking_role:
             missing_fields.append("What role do you play when cooking with someone?")
         if not free_day_activity:
             missing_fields.append("How would you spend a day with no obligations?")
-        if not intro_extro:
-            missing_fields.append("Are you an extrovert or an introvert?")
+        if not love_language:
+            missing_fields.append("What's your love language?")
         if not polyamory:
             missing_fields.append("Polyamory or Monogamy?")
+        if not islander_type:
+            missing_fields.append("What kind of Islander are you?")
+        if not jealousy_response:
+            missing_fields.append("Your match is flirting with someone else — what’s your move?")
+        if not who_to_save:
+            missing_fields.append("Someone’s getting dumped — who are you saving?")
+        if not dating_chaos:
+            missing_fields.append("What kind of chaos exists in your dating history?")
         if not morning_night:
             missing_fields.append("Morning person or a night owl?")
-        if not personality:
+        if not planner:
             missing_fields.append("How would you describe yourself?")
         if not recharge:
             missing_fields.append("How do you recharge after a long day?")
@@ -366,19 +381,21 @@ with st.form("participant_form", clear_on_submit=False):
             missing_fields.append("It's 95°, one bed, no AC — what's your play?")
         if not communication:
             missing_fields.append("How do you text?")
-        if not vacation:
-            missing_fields.append("What is your dream vacation?")
+        if not split_or_steal:
+            missing_fields.append("Would you split the 50k or steal it?")
         if not favorite_meal:
             missing_fields.append("What’s your favorite meal of all-time?")
         if not comfort_show:
-            missing_fields.append(" What’s your go-to comfort show or movie?")
+            missing_fields.append("What’s your go-to comfort show or movie?")
         if not teleport_dinner:
             missing_fields.append("If you could teleport anywhere for dinner tonight, where would you go?")
         if not bucket_list:
             missing_fields.append("What’s something on your bucket list?")
-        if not preference:
-            missing_fields.append("What's your vibe in the villa?")
-    
+        if not the_ick:
+            missing_fields.append("What’s a dealbreaker that instantly gives you the ick?")
+        if preference is None:
+            missing_fields.append("What are your intentions in the villa?")
+
         if missing_fields:
             st.error(f"Oh no! You've forgotten to answer the following fields: {', '.join(missing_fields)}")
         else:
@@ -386,23 +403,30 @@ with st.form("participant_form", clear_on_submit=False):
                 "Name": name,
                 "Email": email,
                 "What are you looking for?": ", ".join(looking_for),
-                "Dream date": dream_date,
+                "Dream Date": dream_date,
                 "Cooking Role": cooking_role,
                 "Free Day Activity": free_day_activity,
-                "Extrovert or an introvert": intro_extro,
+                "Love Language": love_language,
                 "Polyamory or Monogamy": polyamory,
-                "Morning person or a night owl": morning_night,
-                "Planner or go-with-the-flow": personality,
-                "How do you recharge after a long day": recharge,
-                "Hot night": hot_night,
-                "Texter or a caller": communication,
-                "Dream vacation": vacation,
+                "Islander Type": islander_type,
+                "Jealousy Response": jealousy_response,
+                "Who Would You Save": who_to_save,
+                "Dating Chaos": dating_chaos,
+                "Morning vs Night": morning_night,
+                "Planner": planner,
+                "How You Recharge": recharge,
+                "Hot Night Scenario": hot_night,
+                "Communication Style": communication,
+                "Extrovert or introvert": intro_extro,
+                "Split or Steal": split_or_steal,
                 "Favorite Meal": favorite_meal,
-                "Go-to comfort show or movie": comfort_show,
-                "Teleport for dinner to": teleport_dinner,
-                "Bucket list": bucket_list,
-                "Just here for friends vs looking for romance": preference,
+                "Comfort Show or Movie": comfort_show,
+                "Teleport Dinner Location": teleport_dinner,
+                "Bucket List Item": bucket_list,
+                "Dealbreaker / Ick": the_ick,
+                "Villa Intentions (1-10)": preference
             }
+
     
             if add_participant_to_sheet(new_participant_answers):
                 st.success(f"Pack your bags {name} — you’ve made it into the villa! Your match will be revealed via email on the day of the event 💌")
