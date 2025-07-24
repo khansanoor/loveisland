@@ -159,6 +159,22 @@ with st.form("participant_form", clear_on_submit=True):
             key="intro_extro_input"
         )
 
+#8
+    
+    morning_night = st.radio(
+        "**❀ Are you a morning person or a night owl?**",
+        ["Morning 🌞", "Night 🌙", "Whenever I wake up 😴"],
+        key="morning_night_input"
+    )
+
+#9
+    personality = st.radio(
+        "**🧭 Are you more of a planner or go-with-the-flow?**",
+        ["Planner 📅", "Go with the flow 🌊", "Bit of both 🌈"],
+        key="personality_input"
+    )
+    
+    
     submitted = st.form_submit_button("Submit My Profile!")
 
     # Submitting to Gsheets
