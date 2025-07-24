@@ -178,17 +178,11 @@ with st.form("participant_form", clear_on_submit=True):
 
 #9
     personality = st.radio(
-        "**❀ What’s your vibe?**",
+        "**❀ How would you describe yourself?**",
         ["Planner 📋", "Go with the flow 🕊", "Bit of both"],
         key="personality_input"
     )
 
-    
-    # personality = st.radio(
-    #     "**❀ Planner or go-with-the-flow?**",
-    #     ["Planner", "Go with the flow", "Bit of both"],
-    #     key="personality_input"
-    # )
 #10
     recharge = st.radio(
         "**❀ How do you recharge after a long day?**",
@@ -229,6 +223,20 @@ with st.form("participant_form", clear_on_submit=True):
     )
 
 
+#16
+    st.markdown(####"**❀ What's your vibe in the villa?**"####)
+    st.caption("0 = Just here for friends 🤝, 10 = Looking for romance 💘")
+    
+    preference = st.slider(
+        label="",
+        min_value=0,
+        max_value=10,
+        value=5,
+        step=1,
+        format="%d",
+        key="planning_style_input"
+    )
+    
 
     submitted = st.form_submit_button("Submit My Profile!")
 
