@@ -222,11 +222,9 @@ with st.form("participant_form", clear_on_submit=True):
         key="teleport_dinner_input"
     )
 
-
+st.caption("Last, but not least...")
 #16
-    st.markdown("####**❀ What's your vibe in the villa?**####")
-    st.caption("0 = Just here for friends 🤝, 10 = Looking for romance 💘")
-    
+    st.markdown("**❀ What's your vibe in the villa?**")
     preference = st.slider(
         label="",
         min_value=0,
@@ -236,7 +234,8 @@ with st.form("participant_form", clear_on_submit=True):
         format="%d",
         key="planning_style_input"
     )
-    
+    st.caption("0 = Just here for friends 🤝, 10 = Looking for romance 💘")
+
 
     submitted = st.form_submit_button("Submit My Profile!")
 
