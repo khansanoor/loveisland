@@ -224,7 +224,7 @@ with st.form("participant_form", clear_on_submit=True):
 
 
 #16
-    st.markdown(####"**❀ What's your vibe in the villa?**"####)
+    st.markdown("####**❀ What's your vibe in the villa?**####")
     st.caption("0 = Just here for friends 🤝, 10 = Looking for romance 💘")
     
     preference = st.slider(
