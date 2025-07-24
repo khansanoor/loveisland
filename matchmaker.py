@@ -191,7 +191,7 @@ with st.form("participant_form", clear_on_submit=True):
         [
             "We're sharing 🔥",
             "They’re on the couch, I need my space 🛋️",
-            "Rock-paper-scissors decides 🪨📄✂️"
+            "Rock-paper-scissors decides ✂️"
         ],
         index=None,
         key="hot_night_input"
@@ -203,7 +203,7 @@ with st.form("participant_form", clear_on_submit=True):
         ["I reply in 0.2 seconds 📲",
          "Call me instead — I hate texting ☎",
          "I leave you on read — just catch me irl",
-         "I vanish for days, then send paragraphs and voice notes 📝"],
+         "I vanish for days, then send paragraphs and voice notes"],
         index=None,
         key="communication_input"
     )
