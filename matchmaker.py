@@ -103,7 +103,7 @@ with st.form("participant_form", clear_on_submit=True):
 
     # st.markdown("❀")
 #2  
-    match_vibe = st.multiselect(
+    looking_for = st.multiselect(
         "**❀ What kind of vibe are you hoping for in a match?**",
         ["Deep connection 💫", "Fun and flirty 😍", "Friendly ✌️", "Let’s see where it goes 🎲"],
         max_selections=2,
@@ -244,40 +244,66 @@ with st.form("participant_form", clear_on_submit=True):
 
     submitted = st.form_submit_button("Submit My Profile!")
 
-    # Submitting to Gsheets
     if submitted:
+        missing_fields = []
         if not name:
-            st.error("Please enter your name to proceed!")
+            missing_fields.append("Name")
+        if not looking_for:
+            missing_fields.append("What are you looking for?")
+        if not dream_date:
+            missing_fields.append("Dream date")
+        if not cooking_role:
+            missing_fields.append("Cooking Role")
+        if not free_day_activity:
+            missing_fields.append("Free Day Activity")
+        if not intro_extro:
+            missing_fields.append("Extrovert or an introvert?")
+        if not morning_night:
+            missing_fields.append("Morning person or a night owl?")
+        if not personality:
+            missing_fields.append("Planner or go-with-the-flow?")
+        if not recharge:
+            missing_fields.append("How do you recharge after a long day?")
+        if not communication:
+            missing_fields.append("Texter or a caller?")
+        if not vacation:
+            missing_fields.append("Dream vacation?")
+        if not favorite_meal:
+            missing_fields.append("Favorite Meal")
+        if not comfort_show:
+            missing_fields.append("Go-to comfort show or movie?")
+        if not teleport_dinner:
+            missing_fields.append("Teleport for dinner to")
+        if not bucket_list:
+            missing_fields.append("What's on your bucket list?")
+        if not preference:
+            missing_fields.append("Just here for friends vs looking for romance?")
+    
+        if missing_fields:
+            st.error(f"Please fill out the following fields before submitting: {', '.join(missing_fields)}")
         else:
-            # Prepare participant's answers as a dictionary
-            # Ensure these keys match your Google Sheet column headers exactly
             new_participant_answers = {
                 "Name": name,
                 "What are you looking for?": looking_for,
-                "Dream date:": dream_date,
+                "Dream date": dream_date,
                 "Cooking Role": cooking_role,
-                "Favorite Meal": favorite_meal,
-                "Free Day Activity": free_day_activity_other,
+                "Free Day Activity": free_day_activity,
                 "Extrovert or an introvert?": intro_extro,
                 "Morning person or a night owl?": morning_night,
                 "Planner or go-with-the-flow?": personality,
                 "How do you recharge after a long day?": recharge,
-                "What's on your bucket list?": bucket_list,
                 "Texter or a caller?": communication,
-                "Go-to comfort show or movie?": comfort_show,
                 "Dream vacation?": vacation,
+                "Favorite Meal": favorite_meal,
+                "Go-to comfort show or movie?": comfort_show,
                 "Teleport for dinner to": teleport_dinner,
-
-                # We are not collecting Gender or Looking For yet, so they are omitted
-                # If these columns exist in your Google Sheet, they will be filled with '' (empty string)
+                "What's on your bucket list?": bucket_list,
+                "Just here for friends vs looking for romance?": preference,
             }
-
-            # Add to Google Sheet
+    
             if add_participant_to_sheet(new_participant_answers):
                 st.success(f"Thanks, {name}! Your profile has been added to the Google Sheet.")
-                st.balloons() # Celebrate the submission!
-                # Reload data from sheet to include the new entry immediately
-                # This is important for the sidebar "Show All Profiles" to update
+                st.balloons()
                 participants_data = load_participants_from_sheet()
             else:
                 st.error("Failed to add your profile to the Google Sheet. Please try again.")
