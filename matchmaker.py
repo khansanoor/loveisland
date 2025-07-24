@@ -138,6 +138,7 @@ with st.form("participant_form", clear_on_submit=True):
                 "Sous Chef",
                 "Adapt as needed"
             ],
+            index=None,
             key="cooking_role_input"
         )
 
