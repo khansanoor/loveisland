@@ -96,12 +96,11 @@ with st.form("participant_form", clear_on_submit=True):
     # st.header("Tell Us About Yourself!")
     
 #1
-    # name = st.text_input("**❀ What is your name?**", key="name_input").strip()
-    col_name, _ = st.columns([1, 3])  # Adjust the ratio to make the input narrower
-    with col_name:
+
         name = st.text_input("**❀ What is your name?**", key="name_input").strip()
 
-    # st.markdown("❀")
+        email = st.text_input("📧 Enter your email so we can send you your match!", key="email_input")
+  
 #2  
     looking_for = st.multiselect(
         "**❀ What kind of vibe are you hoping for in a match?**",
@@ -302,7 +301,7 @@ with st.form("participant_form", clear_on_submit=True):
             }
     
             if add_participant_to_sheet(new_participant_answers):
-                st.success(f"Thanks, {name}! Your profile has been added to the Google Sheet.")
+                st.success(f"Pack your bags {name} — you’ve made it into the villa! Your match will be revealed via inbox on the day of the event 💌")
                 st.balloons()
                 participants_data = load_participants_from_sheet()
             else:
