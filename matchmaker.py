@@ -151,15 +151,15 @@ with st.form("participant_form", clear_on_submit=False):
         )
 
 
-# 6. Love language in the villa
+#6
     love_language = st.radio(
-        "**❀ What's your love language in the villa?**",
+        "**❀ What's your love language?**",
         [
             "Words that melt me 💬",
-            "Touch me, love me 🤗",
-            "Gifts = love 💝",
-            "Quality time is everything 🕰",
-            "Do stuff for me pls 🧼"
+            "Physical touch 🤗",
+            "Gifts 💝",
+            "Quality time",
+            "Do stuff for me pls"
         ],
         index=None,
         key="love_language_input"
@@ -177,38 +177,37 @@ with st.form("participant_form", clear_on_submit=False):
         key="polyamory_preference"
     )
 
-# 8. What kind of Islander are you?
+#8
     islander_type = st.radio(
         "**❀ What kind of Islander are you?**",
         [
             "The heartbreaker 💔",
             "The hopeless romantic 💕",
-            "The chaotic one 😈",
-            "The mum/dad of the villa 🫶"
+            "The chaotic one 😈"
         ],
         index=None,
         key="islander_type_input"
     )
 
-# 9. Your match flirts with someone else — your move?
+#9
     jealousy_response = st.radio(
         "**❀ Your match is flirting with someone else — what’s your move?**",
         [
             "Pull them for a chat 😤",
             "Give them the silent treatment 😶",
             "Flirt with someone hotter 😘",
-            "Honestly? I’d probably cry 😭"
+            "Cry 😭"
         ],
         index=None,
         key="jealousy_response_input"
     )
 
-# 10. Someone’s getting dumped — who do you save?
+#10
     who_to_save = st.radio(
         "**❀ Someone’s getting dumped from the island… who are you saving?**",
         [
-            "My villa bestie 🫂",
-            "My romantic connection 💖",
+            "My villa bestie",
+            "My romantic connection",
             "The underdog 🐶",
             "Whoever’s hottest 🔥"
         ],
@@ -216,22 +215,21 @@ with st.form("participant_form", clear_on_submit=False):
         key="who_to_save_input"
     )
 
-# 11. Dating chaos (multiple choice)
-    dating_chaos = st.multiselect(
+#11
+    dating_chaos = st.radio(
         "**❀ What kind of chaos exists in your dating history?**",
         [
             "Dated a friend's ex 👀",
             "Ghosted someone... more than once 👻",
             "Back with an ex (again) ♻️",
             "Caught in a love triangle 🔺",
-            "Actually pretty drama-free ✨"
+            "Drama-free ✨"
         ],
-        max_selections=3,
-        placeholder="Pick up to 3 that describe your dating chaos",
+        index=None,
         key="dating_chaos_input"
     )
 
-# 12. Morning person or night owl?
+#12
     morning_night = st.radio(
         "**❀ Morning person or a night owl?**",
         ["Morning 🌞", "Night 🌙", "Whenever I wake up 😴"],
@@ -239,7 +237,7 @@ with st.form("participant_form", clear_on_submit=False):
         key="morning_night_input"
     )
 
-# 13. Planner or go-with-the-flow?
+#13
     personality = st.radio(
         "**❀ How would you describe yourself?**",
         ["Planner 📋", "Go with the flow 🕊", "Bit of both"],
@@ -247,7 +245,7 @@ with st.form("participant_form", clear_on_submit=False):
         key="personality_input"
     )
 
-# 14. How do you recharge after a long day?
+#14
     recharge = st.radio(
         "**❀ How do you recharge after a long day?**",
         ["Alone time", "With friends", "Music or TV", "Journal"],
@@ -255,7 +253,7 @@ with st.form("participant_form", clear_on_submit=False):
         key="recharge_input"
     )
 
-# 15. Hot night — one bed, no AC — your move?
+#15
     hot_night = st.radio(
         "**❀ It's 95°, one bed, no AC — what's your play?**",
         [
@@ -267,7 +265,7 @@ with st.form("participant_form", clear_on_submit=False):
         key="hot_night_input"
     )
 
-# 16. How do you text?
+#16
     communication = st.radio(
         "**❀ How do you text?**",
         [
@@ -279,9 +277,9 @@ with st.form("participant_form", clear_on_submit=False):
         index=None,
         key="communication_input"
     )
-# 17. Split or steal £50k?
+#17
     split_or_steal = st.radio(
-        "**❀ Would you split the £50k or steal it?**",
+        "**❀ Would you split the 50k or steal it?**",
         [
             "Share, of course 🥰",
             "Depends who I’m with 🤔",
@@ -292,36 +290,40 @@ with st.form("participant_form", clear_on_submit=False):
     )
 
 
-
     
-#14
+#18
     favorite_meal = st.text_input(
             "**❀ What’s your favorite meal of all-time?**",
             key="favorite_meal_input"
         )
     
-#15
+#19
     comfort_show = st.text_input(
         "**❀ What’s your go-to comfort show or movie?**",
         key="comfort_show_input"
     )
 
     
-#16
+#20
     teleport_dinner = st.text_input(
         "**❀ If you could teleport anywhere for dinner tonight, where would you go?**",
         key="teleport_dinner_input"
     )
 
-#17
+#21
     bucket_list = st.text_input("**❀ What’s something on your bucket list?**",
         key="bucket_list_input"
     )
 
+#22
+the_ick = st.text_input(
+    "❀ What’s a dealbreaker that instantly gives you the ick?",
+    key="the_ick_input"
+)
     
     st.caption("Last, but not least...")
-#18
-    st.markdown("**❀ What's your vibe in the villa?**")
+#23
+    st.markdown("**❀ What are your intentions in the villa?**")
     preference = st.slider(
         label="",
         min_value=1,
