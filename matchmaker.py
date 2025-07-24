@@ -150,82 +150,151 @@ with st.form("participant_form", clear_on_submit=False):
             key="free_day_activity_input"
         )
 
-#6
 
-    intro_extro = st.radio(
-            "**❀ Are you an extrovert or an introvert?**",
-            ["Introvert", "Extrovert", "Ambi-vert"],
-            index=None,
-            key="intro_extro_input"
-        )
+# 6. Love language in the villa
+love_language = st.radio(
+    "**❀ What's your love language in the villa?**",
+    [
+        "Words that melt me 💬",
+        "Touch me, love me 🤗",
+        "Gifts = love 💝",
+        "Quality time is everything 🕰",
+        "Do stuff for me pls 🧼"
+    ],
+    index=None,
+    key="love_language_input"
+)
 
-#7
-    polyamory = st.radio(
-        "**❀ Polyamory or Monogamy?**",
-         [
+# 7. Polyamory or monogamy?
+polyamory = st.radio(
+    "**❀ Polyamory or Monogamy?**",
+    [
         "I’ve got love to go around 💞",
         "Maybe open to it 🤔",
-        "Prefer monogamy 💍"],
-        index=None,
-        key="polyamory_preference"
-    )
-#8
+        "Prefer monogamy 💍"
+    ],
+    index=None,
+    key="polyamory_preference"
+)
+
+# 8. What kind of Islander are you?
+islander_type = st.radio(
+    "**❀ What kind of Islander are you?**",
+    [
+        "The heartbreaker 💔",
+        "The hopeless romantic 💕",
+        "The chaotic one 😈",
+        "The mum/dad of the villa 🫶"
+    ],
+    index=None,
+    key="islander_type_input"
+)
+
+# 9. Your match flirts with someone else — your move?
+jealousy_response = st.radio(
+    "**❀ Your match is flirting with someone else — what’s your move?**",
+    [
+        "Pull them for a chat 😤",
+        "Give them the silent treatment 😶",
+        "Flirt with someone hotter 😘",
+        "Honestly? I’d probably cry 😭"
+    ],
+    index=None,
+    key="jealousy_response_input"
+)
+
+# 10. Someone’s getting dumped — who do you save?
+who_to_save = st.radio(
+    "**❀ Someone’s getting dumped from the island… who are you saving?**",
+    [
+        "My villa bestie 🫂",
+        "My romantic connection 💖",
+        "The underdog 🐶",
+        "Whoever’s hottest 🔥"
+    ],
+    index=None,
+    key="who_to_save_input"
+)
+
+# 11. Dating chaos (multiple choice)
+dating_chaos = st.multiselect(
+    "**❀ What kind of chaos exists in your dating history?**",
+    [
+        "Dated a friend's ex 👀",
+        "Ghosted someone... more than once 👻",
+        "Back with an ex (again) ♻️",
+        "Caught in a love triangle 🔺",
+        "Actually pretty drama-free ✨"
+    ],
+    max_selections=3,
+    placeholder="Pick up to 3 that describe your dating chaos",
+    key="dating_chaos_input"
+)
+
+# 12. Morning person or night owl?
+morning_night = st.radio(
+    "**❀ Morning person or a night owl?**",
+    ["Morning 🌞", "Night 🌙", "Whenever I wake up 😴"],
+    index=None,
+    key="morning_night_input"
+)
+
+# 13. Planner or go-with-the-flow?
+personality = st.radio(
+    "**❀ How would you describe yourself?**",
+    ["Planner 📋", "Go with the flow 🕊", "Bit of both"],
+    index=None,
+    key="personality_input"
+)
+
+# 14. How do you recharge after a long day?
+recharge = st.radio(
+    "**❀ How do you recharge after a long day?**",
+    ["Alone time", "With friends", "Music or TV", "Journal"],
+    index=None,
+    key="recharge_input"
+)
+
+# 15. Hot night — one bed, no AC — your move?
+hot_night = st.radio(
+    "**❀ It's 95°, one bed, no AC — what's your play?**",
+    [
+        "We're sharing 🔥",
+        "They’re on the couch, I need my space 🛋️",
+        "Rock-paper-scissors decides ✂️"
+    ],
+    index=None,
+    key="hot_night_input"
+)
+
+# 16. How do you text?
+communication = st.radio(
+    "**❀ How do you text?**",
+    [
+        "I reply in 0.2 seconds 📲",
+        "Call me instead — I hate texting ☎",
+        "I leave you on read — just catch me irl",
+        "I vanish for days, then send paragraphs and voice notes"
+    ],
+    index=None,
+    key="communication_input"
+)
+
+# 17. Split or steal £50k?
+split_or_steal = st.radio(
+    "**❀ Would you split the £50k or steal it?**",
+    [
+        "Share, of course 🥰",
+        "Depends who I’m with 🤔",
+        "It’s giving villain era 😈"
+    ],
+    index=None,
+    key="split_or_steal_input"
+)
+
+
+
     
-    morning_night = st.radio(
-        "**❀ Morning person or a night owl?**",
-        ["Morning 🌞", "Night 🌙", "Whenever I wake up 😴"],
-        index=None,
-        key="morning_night_input"
-    )
-
-#9
-    personality = st.radio(
-        "**❀ How would you describe yourself?**",
-        ["Planner 📋", "Go with the flow 🕊", "Bit of both"],
-        index=None,
-        key="personality_input"
-    )
-
-#10
-    recharge = st.radio(
-        "**❀ How do you recharge after a long day?**",
-        ["Alone time", "With friends", "Music or TV", "Journal"],
-        index=None,
-        key="recharge_input"
-    )
-
-
-#11
-    hot_night = st.radio(
-        "**❀ It's 95°, one bed, no AC — what's your play?**",
-        [
-            "We're sharing 🔥",
-            "They’re on the couch, I need my space 🛋️",
-            "Rock-paper-scissors decides ✂️"
-        ],
-        index=None,
-        key="hot_night_input"
-    )
-    
-#12
-    communication = st.radio(
-        "**❀ How do you text?**",
-        ["I reply in 0.2 seconds 📲",
-         "Call me instead — I hate texting ☎",
-         "I leave you on read — just catch me irl",
-         "I vanish for days, then send paragraphs and voice notes"],
-        index=None,
-        key="communication_input"
-    )
-
-#13
-    vacation = st.radio(
-        "**❀ What is your dream vacation?**",
-        ["Beach 🏖️", "Mountains 🏔️", "Both please ✨"],
-        index=None,
-        key="vacation_input"
-    )
-
 #14
     favorite_meal = st.text_input(
             "**❀ What’s your favorite meal of all-time?**",
