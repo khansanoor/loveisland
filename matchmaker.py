@@ -103,7 +103,7 @@ with st.form("participant_form", clear_on_submit=False):
 
     pronouns = st.text_input("**❀ What are your pronouns?**", key="pronoun_input").strip()
 
-    gender_preference = st.text_input("**❀ Who are you into?**", key="pronoun_input").strip()
+    gender_preference = st.text_input("**❀ Who are you into?**", key="gender_input").strip()
 #2  
     looking_for = st.multiselect(
         "**❀ What kind of vibe are you hoping for in a match?**",
