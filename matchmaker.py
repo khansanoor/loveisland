@@ -324,7 +324,7 @@ with st.form("participant_form", clear_on_submit=False):
 
 #23
     the_ick = st.text_input(
-        "❀ What’s a dealbreaker that instantly gives you the ick?",
+        "**❀ What’s a dealbreaker that instantly gives you the ick?**",
         key="the_ick_input"
     )
     
