@@ -177,11 +177,20 @@ with st.form("participant_form", clear_on_submit=True):
     )
 
 #9
-    personality = st.radio(
-        "**❀ Planner or go-with-the-flow?**",
-        ["Planner", "Go with the flow", "Bit of both"],
-        key="personality_input"
+    spontaneity_planning = st.slider(
+        "❀ Go-with-the-flow  or Planner?", # Label for the slider itself
+        min_value=1,
+        max_value=5,
+        value=3, # Default value
+        step=1,
+        key="spontaneity_planning_input"
     )
+    
+    # personality = st.radio(
+    #     "**❀ Planner or go-with-the-flow?**",
+    #     ["Planner", "Go with the flow", "Bit of both"],
+    #     key="personality_input"
+    # )
 #10
     recharge = st.radio(
         "**❀ How do you recharge after a long day?**",
