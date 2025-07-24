@@ -189,7 +189,7 @@ with st.form("participant_form", clear_on_submit=True):
     hot_night = st.radio(
         "**❀ It's 95°, one bed, no AC — what's your play?**",
         [
-            "We're sharing — the heat’s already between us 🔥",
+            "We're sharing 🔥",
             "They’re on the couch, I need my space 🛋️",
             "Rock-paper-scissors decides 🪨📄✂️"
         ],
