@@ -168,8 +168,8 @@ with st.form("participant_form", clear_on_submit=False):
         "Prefer monogamy 💍"],
         index=None,
         key="polyamory_preference"
-
-#7
+    )
+#8
     
     morning_night = st.radio(
         "**❀ Morning person or a night owl?**",
@@ -178,7 +178,7 @@ with st.form("participant_form", clear_on_submit=False):
         key="morning_night_input"
     )
 
-#8
+#9
     personality = st.radio(
         "**❀ How would you describe yourself?**",
         ["Planner 📋", "Go with the flow 🕊", "Bit of both"],
@@ -186,7 +186,7 @@ with st.form("participant_form", clear_on_submit=False):
         key="personality_input"
     )
 
-#9
+#10
     recharge = st.radio(
         "**❀ How do you recharge after a long day?**",
         ["Alone time", "With friends", "Music or TV", "Journal"],
@@ -195,7 +195,7 @@ with st.form("participant_form", clear_on_submit=False):
     )
 
 
-#10
+#11
     hot_night = st.radio(
         "**❀ It's 95°, one bed, no AC — what's your play?**",
         [
@@ -207,7 +207,7 @@ with st.form("participant_form", clear_on_submit=False):
         key="hot_night_input"
     )
     
-#11 
+#12
     communication = st.radio(
         "**❀ How do you text?**",
         ["I reply in 0.2 seconds 📲",
@@ -218,7 +218,7 @@ with st.form("participant_form", clear_on_submit=False):
         key="communication_input"
     )
 
-#12
+#13
     vacation = st.radio(
         "**❀ What is your dream vacation?**",
         ["Beach 🏖️", "Mountains 🏔️", "Both please ✨"],
@@ -226,33 +226,33 @@ with st.form("participant_form", clear_on_submit=False):
         key="vacation_input"
     )
 
-#13
+#14
     favorite_meal = st.text_input(
             "**❀ What’s your favorite meal of all-time?**",
             key="favorite_meal_input"
         )
     
-#14
+#15
     comfort_show = st.text_input(
         "**❀ What’s your go-to comfort show or movie?**",
         key="comfort_show_input"
     )
 
     
-#15
+#16
     teleport_dinner = st.text_input(
         "**❀ If you could teleport anywhere for dinner tonight, where would you go?**",
         key="teleport_dinner_input"
     )
 
-#16 
+#17
     bucket_list = st.text_input("**❀ What’s something on your bucket list?**",
         key="bucket_list_input"
     )
 
     
     st.caption("Last, but not least...")
-#17
+#18
     st.markdown("**❀ What's your vibe in the villa?**")
     preference = st.slider(
         label="",
