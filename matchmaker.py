@@ -345,7 +345,7 @@ with st.form("participant_form", clear_on_submit=False):
 
     submitted = st.form_submit_button("Submit My Profile!")
 
-        if submitted:
+    if submitted:
         missing_fields = []
             if not name:
                 missing_fields.append("Name")
