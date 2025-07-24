@@ -396,36 +396,36 @@ with st.form("participant_form", clear_on_submit=False):
         if preference is None:
             missing_fields.append("What are your intentions in the villa?")
         
-            if missing_fields:
-                st.error(f"Oh no! You've forgotten to answer the following fields: {', '.join(missing_fields)}")
-            else:
-                new_participant_answers = {
-                    "Name": name,
-                    "Email": email,
-                    "What are you looking for?": ", ".join(looking_for),
-                    "Dream Date": dream_date,
-                    "Cooking Role": cooking_role,
-                    "Free Day Activity": free_day_activity,
-                    "Love Language": love_language,
-                    "Polyamory or Monogamy": polyamory,
-                    "Islander Type": islander_type,
-                    "Jealousy Response": jealousy_response,
-                    "Who Would You Save": who_to_save,
-                    "Dating Chaos": dating_chaos,
-                    "Morning vs Night": morning_night,
-                    "Planner": planner,
-                    "How You Recharge": recharge,
-                    "Hot Night Scenario": hot_night,
-                    "Communication Style": communication,
-                    "Extrovert or introvert": intro_extro,
-                    "Split or Steal": split_or_steal,
-                    "Favorite Meal": favorite_meal,
-                    "Comfort Show or Movie": comfort_show,
-                    "Teleport Dinner Location": teleport_dinner,
-                    "Bucket List Item": bucket_list,
-                    "Dealbreaker / Ick": the_ick,
-                    "Villa Intentions (1-10)": preference
-                }
+        if missing_fields:
+            st.error(f"Oh no! You've forgotten to answer the following fields: {', '.join(missing_fields)}")
+        else:
+            new_participant_answers = {
+                "Name": name,
+                "Email": email,
+                "What are you looking for?": ", ".join(looking_for),
+                "Dream Date": dream_date,
+                "Cooking Role": cooking_role,
+                "Free Day Activity": free_day_activity,
+                "Love Language": love_language,
+                "Polyamory or Monogamy": polyamory,
+                "Islander Type": islander_type,
+                "Jealousy Response": jealousy_response,
+                "Who Would You Save": who_to_save,
+                "Dating Chaos": dating_chaos,
+                "Morning vs Night": morning_night,
+                "Planner": planner,
+                "How You Recharge": recharge,
+                "Hot Night Scenario": hot_night,
+                "Communication Style": communication,
+                "Extrovert or introvert": intro_extro,
+                "Split or Steal": split_or_steal,
+                "Favorite Meal": favorite_meal,
+                "Comfort Show or Movie": comfort_show,
+                "Teleport Dinner Location": teleport_dinner,
+                "Bucket List Item": bucket_list,
+                "Dealbreaker / Ick": the_ick,
+                "Villa Intentions (1-10)": preference
+            }
 
     
             if add_participant_to_sheet(new_participant_answers):
