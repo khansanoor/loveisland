@@ -224,7 +224,6 @@ with st.form("participant_form", clear_on_submit=True):
 #15 
     st.markdown("**❀ What’s something on your bucket list?**")
     bucket_list = st.text_input(
-        "",
         key="bucket_list_input"
     )
 
