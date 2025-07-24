@@ -99,7 +99,7 @@ with st.form("participant_form", clear_on_submit=True):
 
     name = st.text_input("**❀ What is your name?**", key="name_input").strip()
 
-    email = st.text_input("📧 Enter your email so we can send you your match!", key="email_input")
+    email = st.text_input("**❀ Enter your email, so we can send you your match! 📧**", key="email_input")
   
 #2  
     looking_for = st.multiselect(
