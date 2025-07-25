@@ -411,6 +411,7 @@ with st.form("participant_form", clear_on_submit=False):
                 "Name": name,
                 "Email": email,
                 "Pronouns": pronouns,
+                "Gender Preference": gender_preference,
                 "What are you looking for?": ", ".join(looking_for),
                 "Dream Date": dream_date,
                 "Cooking Role": cooking_role,
